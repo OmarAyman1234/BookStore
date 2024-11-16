@@ -69,4 +69,4 @@ const books = [
     description: "Description 10",
     image: "images/initial-book-img.png"
   },
-];
+]
