@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="icon" href="../../assets/images/logo.png" />
+    <link rel="stylesheet" href="loginRegister.css">
+    <title>Sign In</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logoContent__name">Maktaba</h1>
+    </header>
+
+    <main>
+      <div class="modal__content">
+        <h2 class="modal__title">Sign In</h2>
+        <form action="/login" method="POST">
+          <input type="text" class="modal__input" name="username" placeholder="Username" required />
+          <input type="password" class="modal__input" name="password" placeholder="Password" required />
+          <button type="submit" class="button__submit">Login</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
