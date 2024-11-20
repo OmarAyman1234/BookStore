@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="icon" href="../../assets/images/logo.png" />
     <link rel="stylesheet" href="userDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>User Dashboard</title>
   </head>
   <body>
@@ -28,13 +29,166 @@
         <button class="btn btn--secondary">Login</button>
         <button class="btn btn--primary">Sign Up</button>
       </div>
-      <!-- <div class="navbar__toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div> -->
-
       <script src="userDashboard.js"></script>
     </header> 
+    <!-- My Part -->
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fas fa-book-open"></i>
+          <h1>MaktabaHub</h1>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fas fa-book"></i>
+            <span>My Books</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fas fa-bell"></i>
+            <span>Notifications</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+          <a href="#" class="nav-item logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="dashboard-header">
+          <div class="welcome-text">
+            <h2>Welcome back, Ahmad</h2>
+            <p>Continue your journey of knowledge</p>
+          </div>
+          <div class="user-profile">
+            <span class="notification-badge">
+              <i class="fas fa-bell"></i>
+              <span class="badge">3</span>
+            </span>
+            <img
+              src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?auto=format&fit=crop&q=80&w=50&h=50"
+              alt="Profile"
+              class="profile-img"
+            />
+          </div>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-book-reader"></i>
+            <div class="stat-info">
+              <h3>24</h3>
+              <p>Books Read</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-clock"></i>
+            <div class="stat-info">
+              <h3>3</h3>
+              <p>Reserved Books</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-heart"></i>
+            <div class="stat-info">
+              <h3>15</h3>
+              <p>Saved Books</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <!-- Current Readings -->
+          <section class="dashboard-section current-readings">
+            <h3>Current Readings</h3>
+            <div class="book-list">
+              <div class="book-item">
+                <img
+                  src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=100&h=150"
+                  alt="Book Cover"
+                />
+                <div class="book-info">
+                  <h4>The Sealed Nectar</h4>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 65%"></div>
+                  </div>
+                  <p>65% Complete</p>
+                  <span class="due-date">Due: March 25, 2024</span>
+                </div>
+              </div>
+              <div class="book-item">
+                <img
+                  src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=100&h=150"
+                  alt="Book Cover"
+                />
+                <div class="book-info">
+                  <h4>Divine Speech</h4>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 30%"></div>
+                  </div>
+                  <p>30% Complete</p>
+                  <span class="due-date">Due: March 30, 2024</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recommendations -->
+          <section class="dashboard-section recommendations">
+            <h3>Recommended for You</h3>
+            <div class="recommendation-grid">
+              <div class="recommendation-card">
+                <img
+                  src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=150&h=200"
+                  alt="Book Cover"
+                />
+                <div class="recommendation-info">
+                  <h4>The Productive Muslim</h4>
+                  <p>Mohammed Faris</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8</span>
+                  </div>
+                </div>
+              </div>
+              <div class="recommendation-card">
+                <img
+                  src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=150&h=200"
+                  alt="Book Cover"
+                />
+                <div class="recommendation-info">
+                  <h4>Reclaim Your Heart</h4>
+                  <p>Yasmin Mogahed</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
