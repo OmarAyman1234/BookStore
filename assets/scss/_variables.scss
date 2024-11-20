@@ -1,0 +1,42 @@
+:root {
+  --primary-color: #2e8b57; /* Emerald Green */
+  --secondary-color: #e9dbc1; /* Beige */
+  --accent-color: #d4af37; /* Deep Gold */
+  --text-color: #000000; /* Black */
+
+  --light-bg-color: #ffffff; /* White for light background elements */
+  --dark-bg-color: #333333; /* Dark background for footer or dark mode */
+  --border-color: #cccccc; /* Light grey for borders */
+  --hover-color: #255a3f; /* Darker shade of emerald green for hover states */
+  --warning-color: #ff6347; /* Tomato red for warnings or alerts */
+  --success-color: #28a745; /* Green for success messages */
+  --link-color: #1e90ff; /* Dodger Blue for links */
+  --disabled-color: #d3d3d3; /* Light grey for disabled elements */
+
+  --fs-14: 1.4rem;
+  --fs-16: 1.6rem;
+  --fs-18: 1.8rem;
+  --fs-20: 2rem;
+  --fs-25: 2.5rem;
+  --fs-30: 3rem;
+  --fs-35: 3.5rem;
+  --fs-50: 5rem;
+
+  --lh-30: 3rem;
+  --lh-45: 4.5rem;
+  --lh-50: 5rem;
+  --lh-70: 7rem;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --default-gap: 5rem;
+
+  --radius-50: 5rem;
+  --radius-10: 1rem;
+
+  --animation-timing: 0.15s;
+
+  --desktop-width: 110rem;
+}

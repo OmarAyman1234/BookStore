@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --primary-color: #2e8b57; /* Emerald Green */
+  --secondary-color: #e9dbc1; /* Beige */
+  --accent-color: #d4af37; /* Deep Gold */
+  --text-color: #000000; /* Black */
+  --light-bg-color: #ffffff; /* White for light background elements */
+  --dark-bg-color: #333333; /* Dark background for footer or dark mode */
+  --border-color: #cccccc; /* Light grey for borders */
+  --hover-color: #255a3f; /* Darker shade of emerald green for hover states */
+  --warning-color: #ff6347; /* Tomato red for warnings or alerts */
+  --success-color: #28a745; /* Green for success messages */
+  --link-color: #1e90ff; /* Dodger Blue for links */
+  --disabled-color: #d3d3d3; /* Light grey for disabled elements */
+  --fs-14: 1.4rem;
+  --fs-16: 1.6rem;
+  --fs-18: 1.8rem;
+  --fs-20: 2rem;
+  --fs-25: 2.5rem;
+  --fs-30: 3rem;
+  --fs-35: 3.5rem;
+  --fs-50: 5rem;
+  --lh-30: 3rem;
+  --lh-45: 4.5rem;
+  --lh-50: 5rem;
+  --lh-70: 7rem;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+  --default-gap: 5rem;
+  --radius-50: 5rem;
+  --radius-10: 1rem;
+  --animation-timing: 0.15s;
+  --desktop-width: 110rem;
+}
+
+/* Remove all margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a consistent line-height and text-rendering behavior */
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape on iOS */
+  text-rendering: optimizeSpeed;
+  font-family: Arial, sans-serif; /* Set a default font family */
+}
+
+/* Remove the default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove quotes from blockquote and q */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+/* Remove default styling for links */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
+/* Reset table properties */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove all borders from images and links */
+img, a {
+  border: 0;
+}
+
+/* Reset button and input styling */
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Set defaults for inputs and buttons */
+input[type=text],
+textarea {
+  appearance: none;
+  border-radius: 0;
+}
+
+/* Remove focus outlines for accessibility and style them as needed */
+:focus {
+  outline: none;
+}
+
+/* Set default height for media elements */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  position: relative;
+  background-color: var(--secondary-color);
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--default-gap);
+}
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 0.1rem;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 0;
+}
+.header .logoContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header .logoContent__logo {
+  width: 3.5rem;
+}
+.header .logoContent__name {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.header .navLinks__list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  font-weight: var(--fw-500);
+}
+.header .navLinks__link {
+  transition: var(--animation-timing);
+}
+.header .navLinks__link:hover {
+  color: var(--hover-color);
+}
+.header .button {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  font-weight: var(--fw-400);
+  color: var(--clr-dark-blue);
+  white-space: nowrap;
+}
+.header .button__sign {
+  background-color: var(--primary-color);
+  color: whitesmoke;
+  border-radius: var(--radius-50);
+  padding: 0.7rem 2rem;
+  transition: var(--animation-timing);
+}
+.header .button__sign:hover {
+  background-color: var(--hover-color);
+}
+
+body {
+  font-family: "Funnel Display", "Rubik", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */
