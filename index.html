@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/images/logo.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./pages/home/home.css" />
     <title>Maktaba</title>
@@ -22,23 +27,26 @@
         </div>
         <nav class="navbar__menu">
           <a href="#home" class="active">Home</a>
-          <a href="#catalog">Catalog</a>
+          <a href="./pages/catalog/catalog.html">Catalog</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
         <div class="navbar__auth">
-          <button class="btn btn--secondary">Login</button>
-          <button class="btn btn--primary">Sign Up</button>
+          <a
+            href="./pages/login-register/loginRegister.html"
+            class="btn btn--secondary"
+            >Login</a
+          >
+          <a
+            href="./pages/login-register/loginRegister.html"
+            class="btn btn--primary"
+            >Sign Up</a
+          >
         </div>
-        <!-- <div class="navbar__toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
       </header>
 
       <!-- Hero Section -->
-      <section class="hero" id="home">
+      <section class="hero">
         <div class="hero__content">
           <h1 class="hero__title">Discover the World of Islamic Knowledge</h1>
           <p class="hero__subtitle">
@@ -54,7 +62,7 @@
         </div>
       </section>
 
-      <!-- Search Section
+      <!-- Search Section -->
       <section class="search">
         <div class="search__container">
           <div class="search__box">
@@ -73,7 +81,52 @@
             <span class="tag">Seerah</span>
           </div>
         </div>
-      </section> -->
+      </section>
+
+      <!-- Featured Books -->
+      <section class="books">
+        <h2 class="section-title">Featured Books</h2>
+        <div class="books__grid">
+          <div class="book-card">
+            <div class="book-card__cover">
+              <img
+                src="./assets/images/Riyadh As-Salihin.jpg"
+                alt="Book Cover"
+              />
+            </div>
+            <div class="book-card__info">
+              <h3>Riyadh As-Salihin</h3>
+              <p>Imam An-Nawawi</p>
+              <a
+                href="https://shamela.ws/book/12014"
+                class="btn btn--secondary"
+                target="_blank"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-card__cover">
+              <img
+                src="./assets/images/40-Hadith-An-Nawawi.jpg"
+                alt="Book Cover of 40 Hadith An-Nawawi"
+              />
+            </div>
+            <div class="book-card__info">
+              <h3>40 Hadith An-Nawawi</h3>
+              <p>Imam An-Nawawi</p>
+              <a
+                href="https://shamela.ws/book/12014"
+                class="btn btn--secondary"
+                target="_blank"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Footer -->
       <footer class="footer">
@@ -91,10 +144,10 @@
           </div>
           <div class="footer__links">
             <h4>Quick Links</h4>
-            <a href="#home">Home</a>
-            <a href="#catalog">Catalog</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="./index.html">Home</a>
+            <a href="./pages/catalog/catalog.html">Catalog</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
           </div>
           <div class="footer__contact">
             <h4>Contact Us</h4>
