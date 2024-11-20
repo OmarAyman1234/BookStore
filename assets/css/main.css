@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Set a consistent line-height and text-rendering behavior */
 html {
   line-height: 1.5;
@@ -528,4 +529,41 @@ img, video {
 body {
   font-family: "Rubik", sans-serif;
   padding-top: 5.8rem;
+}
+
+@media (max-width: 768px) {
+  .navbar__menu, .navbar__auth {
+    display: none;
+  }
+  .navbar__toggle {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar__toggle span {
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #1c1c1c;
+    margin: 0.3rem 0;
+    transition: all 0.3s ease;
+  }
+  .navbar.active .navbar__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .hero__title {
+    font-size: 2.2rem;
+  }
+  .hero .btn--large {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=main.css.map */

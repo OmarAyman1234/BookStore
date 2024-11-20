@@ -15,3 +15,51 @@ body {
   font-family: "Rubik", sans-serif;
   padding-top: $navbar-height;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    &__menu,
+    &__auth {
+      display: none;
+    }
+
+    &__toggle {
+      display: block;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 2rem;
+        height: 0.2rem;
+        background-color: $dark-color;
+        margin: 0.3rem 0;
+        transition: all 0.3s ease;
+      }
+    }
+
+    &.active {
+      .navbar__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        padding: 3rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .hero {
+    &__title {
+      font-size: 2.2rem;
+    }
+    & .btn--large {
+      font-size: 0.8rem;
+    }
+  }
+}
