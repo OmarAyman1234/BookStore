@@ -11,9 +11,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  padding-top: 120px;
-}
 /* Set a consistent line-height and text-rendering behavior */
 html {
   line-height: 1.5;
