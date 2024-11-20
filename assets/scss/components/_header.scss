@@ -1,71 +1,62 @@
-.header {
-  position: relative;
-  background-color: var(--secondary-color);
-  height: 6rem;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 5%;
+  background-color: rgba($white, 0.9);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: var(--default-gap);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 0.1rem;
-    background-color: var(--primary-color);
-    bottom: 0;
-    left: 0;
-  }
-
-  & .logoContent {
+  &__logo {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-color;
 
-    &__logo {
+    & img {
       width: 3.5rem;
-    }
-    &__name {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-  }
-
-  & .navLinks {
-    &__list {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      font-size: 1.4rem;
-      font-weight: var(--fw-500);
-    }
-    &__link {
-      transition: var(--animation-timing);
-      &:hover {
-        color: var(--hover-color);
+      object-fit: cover;
+      &.rotating {
+        animation: rotate 15s linear infinite;
       }
     }
   }
 
-  & .button {
+  &__menu {
     display: flex;
-    align-items: center;
     gap: 2rem;
-    font-size: 1.4rem;
-    font-weight: var(--fw-400);
-    color: var(--clr-dark-blue);
-    white-space: nowrap;
 
-    &__sign {
-      background-color: var(--primary-color);
-      color: whitesmoke;
-      border-radius: var(--radius-50);
-      padding: 0.7rem 2rem;
-      transition: var(--animation-timing);
+    a {
+      color: $dark-color;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
 
-      &:hover {
-        background-color: var(--hover-color);
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primary-color;
+        transition: width 0.3s ease;
+      }
+      &:hover::after {
+        width: 100%;
       }
     }
+  }
+  &__auth {
+    display: flex;
+    gap: 1rem;
   }
 }
