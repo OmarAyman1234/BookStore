@@ -35,15 +35,15 @@ function displayResults(results) {
       <div class="result-item">
         <div class="result-item__image">
           <img src="${item.image || "./assets/images/book.png"}" alt="${
-      item.title
+      item.name
     }" />
         </div>
         <div class="result-item__info">
-          <h4>${item.title}</h4>
+          <h4>${item.name}</h4>
           <p class="author">By: ${item.author}</p>
-          <span class="topic-tag">${item.topic}</span>
+          <span class="topic-tag">${item.category}</span>
           <a href="./book-details/bookDetails.html?title=${encodeURIComponent(
-            item.title
+            item.name
           )}" class="view-details-link">View Details</a>
         </div>
       </div>
@@ -65,9 +65,9 @@ searchInput.addEventListener("input", (e) => {
 function handleSearch(query) {
   const filteredResults = books.filter(
     (book) =>
-      book.title.toLowerCase().includes(query.toLowerCase()) ||
+      book.name.toLowerCase().includes(query.toLowerCase()) ||
       book.author.toLowerCase().includes(query.toLowerCase()) ||
-      book.topic.toLowerCase().includes(query.toLowerCase())
+      book.category.toLowerCase().includes(query.toLowerCase())
   );
 
   displayResults(filteredResults);
