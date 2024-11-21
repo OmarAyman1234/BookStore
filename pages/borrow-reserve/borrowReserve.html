@@ -3,23 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="icon" href="/assets/images/logo.png" />
-    <link rel="stylesheet" href="/pages/borrow-reserve/borrowReserve.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="icon" href="../../assets/images/logo.png" />
+    <link rel="stylesheet" href="borrowReserve.css">
     <title>Zad El Maad - Borrow Reserve</title>
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     rel="stylesheet"
     />
-    <base href="/BookStore"/>
   </head>
   <body>
-    <header class="navbar"></header> 
+    <header class="navbar">
+      <div class="navbar__logo logoContent">
+        <img
+          src="../../assets/images/logo.png"
+          alt="Maktaba Logo"
+          class="logo-img rotating"
+        />
+        <span>Maktaba</span>
+      </div>
+      <nav class="navbar__menu">
+        <a href="./pages/borrow-reserve/borrowReserve.html" class="active">Home</a>
+        <a href="./pages/catalog/catalog.html">Catalog</a>
+        <a href="./pages/user-dashboard/userDashboard.html">About</a>
+        <a href="./pages/book-details/bookDetails.html">Contact</a>
+      </nav>
+      <div class="navbar__auth">
+        <button class="btn btn--secondary">Login</button>
+        <button class="btn btn--primary">Sign Up</button>
+      </div>
+      <div class="navbar__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
 
     <div class="book-container">
       <div class="book-content">
         <div class="bookImage">
-          <img src="/assets/images/books-data/zad_el_maad.jpg" alt="Book image">
+          <img src="../../assets/images/books-data/zad_el_maad.jpg" alt="Book image">
         </div>
         
         <div class="book-details">
@@ -98,8 +121,46 @@
       </form>
     </div>
   
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <div class="footer__logo logoContent">
+            <img
+              src="../../assets/images/logo.png"
+              alt="Maktaba Logo"
+              class="logo-img rotating"
+            />
+            <span>Maktaba</span>
+          </div>
+          <p>Maktaba is your gateway to authentic Islamic knowledge</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <a href="./index.html">Home</a>
+          <a href="./pages/catalog/catalog.html">Catalog</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@maktaba.com</p>
+          <p>Phone: +1 234 567 890</p>
+        </div>
+        <div class="footer__social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Maktaba. All rights reserved.</p>
+      </div>
+    </footer>
 
-    <script src="/pages/borrow-reserve/borrowReserve.js" type="module"></script>
+
+    <script src="borrowReserve.js"></script>
   </body>
 </html>
