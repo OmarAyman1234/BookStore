@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { generateHeader, generateFooter } from "/scripts/headerFooter.js";
+=======
+import { generateHeader, generateFooter } from "./scripts/headerFooter.js";
+>>>>>>> ad92949f74822bc8581ebceb9233324c94726ccf
 
 generateHeader();
 generateFooter();
