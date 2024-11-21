@@ -99,7 +99,7 @@ body {
     background-color: white;
 }
 
-.submit-btn {
+/* .submit-btn {
     background-color: var(--secondary-gold);
     color: var(--text-dark);
     border: none;
@@ -113,8 +113,10 @@ body {
 .submit-btn:hover {
     background-color: #c49a2e;
     transform: scale(1.02);
+} */
+.btn{
+    color: #D4AF37;
 }
-
 @media (max-width: 768px) {
     .book-content {
         flex-direction: column;
