@@ -10,7 +10,7 @@
     />
 
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./pages/home/home.css" />
+    <!-- <link rel="stylesheet" href="/pages/home/home.css" /> -->
     <title>Maktaba</title>
   </head>
   <body>
@@ -19,29 +19,21 @@
       <header class="navbar">
         <div class="navbar__logo logoContent">
           <img
-            src="assets/images/logo.png"
+            src="./assets/images/logo.png"
             alt="Maktaba Logo"
             class="logo-img rotating"
           />
           <span>Maktaba</span>
         </div>
         <nav class="navbar__menu">
-          <a href="#home" class="active">Home</a>
+          <a href="./pages/borrow-reserve/borrowReserve.html" class="active">Home</a>
           <a href="./pages/catalog/catalog.html">Catalog</a>
           <a href="./pages/user-dashboard/userDashboard.html">About</a>
-          <a href="#contact">Contact</a>
+          <a href="./pages/book-details/bookDetails.html">Contact</a>
         </nav>
         <div class="navbar__auth">
-          <a
-            href="./pages/login-register/loginRegister.html"
-            class="btn btn--secondary"
-            >Login</a
-          >
-          <a
-            href="./pages/login-register/loginRegister.html"
-            class="btn btn--primary"
-            >Sign Up</a
-          >
+          <button class="btn btn--secondary">Login</button>
+          <button class="btn btn--primary">Sign Up</button>
         </div>
         <div class="navbar__toggle">
           <span></span>
@@ -139,7 +131,7 @@
           <div class="footer__about">
             <div class="footer__logo logoContent">
               <img
-                src="assets/images/logo.png"
+                src="./assets/images/logo.png"
                 alt="Maktaba Logo"
                 class="logo-img rotating"
               />
@@ -173,6 +165,6 @@
         </div>
       </footer>
     </div>
-    <script src="index.js"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

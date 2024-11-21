@@ -3,38 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="icon" href="../../assets/images/logo.png" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" href="/assets/images/logo.png" />
     <link rel="stylesheet" href="bookDetails.css">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <base href="/BookStore/">
     <title>Book details</title>
   </head>
   <body>
-    <header class="navbar">
-      <div class="navbar__logo logoContent">
-        <img
-          src="../../assets/images/logo.png"
-          alt="Maktaba Logo"
-          class="logo-img rotating"
-        />
-        <span>Maktaba</span>
-      </div>
-      <nav class="navbar__menu">
-        <a href="#home" class="active">Home</a>
-        <a href="#catalog">Catalog</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="navbar__auth">
-        <button class="btn btn--secondary">Login</button>
-        <button class="btn btn--primary">Sign Up</button>
-      </div>
-      <!-- <div class="navbar__toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div> -->
-    </header>    
+    <header class="navbar"></header>    
 
-    <script src="bookDetails.js"></script>
+    <div class="details-content">
+      <div class="details-details-container">
+        <div class="details-book-img-container">
+          <img class="details-book-img" src="/assets/images/books-data/40-Hadith-An-Nawawi.jpg" alt="">
+        </div>
+        <div class="details-book-info">
+          <h2>40 Hadith An-Nawawi</h2>
+          <p>An-Nawawi</p>
+          <p class="details-book-description"></p>
+  
+        </div>
+      </div>
+  
+      <div class="details-related-books">
+        <h2>Related Books</h2>
+        <div class="details-related-books-container">
+          <div class="details-related-book-container">
+            <img class="details-related-book-img" src="/assets/images/books-data/sahih-al-bukhari.jpg" alt="">
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    
+    <footer class="footer"></footer> 
+    <script src="/pages/book-details/bookDetails.js" type="module"></script>
   </body>
 </html>

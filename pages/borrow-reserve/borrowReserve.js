@@ -1,3 +1,7 @@
+import { generateHeader, generateFooter } from "/scripts/headerFooter.js";
+generateHeader();
+generateFooter();
+
 document.addEventListener('DOMContentLoaded', function() {
     const forms = document.querySelectorAll('.book-form');
 

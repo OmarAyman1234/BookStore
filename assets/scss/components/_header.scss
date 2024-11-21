@@ -56,8 +56,13 @@
       }
     }
   }
+
   &__auth {
     display: flex;
     gap: 1rem;
+  }
+
+  &__toggle{
+    display: none;
   }
 }
