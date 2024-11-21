@@ -8,19 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-<<<<<<< HEAD
-<<<<<<< HEAD
     <link rel="stylesheet" href="./assets/css/main.css" />
-=======
-
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <!-- <link rel="stylesheet" href="/pages/home/home.css" /> -->
->>>>>>> ad92949f74822bc8581ebceb9233324c94726ccf
-=======
-
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <!-- <link rel="stylesheet" href="/pages/home/home.css" /> -->
->>>>>>> f3bf1bc66f22d8998114a2cf235d7218f6d8b7ed
     <title>Maktaba</title>
   </head>
   <body>
@@ -36,14 +24,37 @@
           <span>Maktaba</span>
         </div>
         <nav class="navbar__menu">
-          <a href="./pages/borrow-reserve/borrowReserve.html" class="active">Home</a>
-          <a href="./pages/catalog/catalog.html">Catalog</a>
-          <a href="./pages/user-dashboard/userDashboard.html">About</a>
-          <a href="./pages/book-details/bookDetails.html">Contact</a>
+          <a href="./pages/borrow-reserve/borrowReserve.html" class="active">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="./pages/catalog/catalog.html">
+            <i class="fas fa-book"></i> Catalog
+          </a>
+          <a href="./pages/user-dashboard/userDashboard.html">
+            <i class="fas fa-user"></i> About
+          </a>
+          <a href="./pages/book-details/bookDetails.html">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
         </nav>
         <div class="navbar__auth">
           <button class="btn btn--secondary">Login</button>
           <button class="btn btn--primary">Sign Up</button>
+
+          <!-- Avatar for signed-in users -->
+          <div class="navbar__profile">
+            <!-- <img
+              src="./assets/icons/person-solid.svg"
+              alt="User Avatar"
+              class="navbar__avatar"
+            /> -->
+            <a href="#" class="navbar__avatar"><i class="fas fa-user"></i></a>
+
+            <div class="navbar__dropdown">
+              <a href="#profile"> <i class="fas fa-user"></i> Profile </a>
+              <a href="#logout"> <i class="fas fa-sign-out-alt"></i> Logout </a>
+            </div>
+          </div>
         </div>
         <div class="navbar__toggle">
           <span></span>

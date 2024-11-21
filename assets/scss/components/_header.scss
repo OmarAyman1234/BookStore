@@ -62,7 +62,100 @@
     gap: 1rem;
   }
 
-  &__toggle{
+  &__toggle {
     display: none;
+  }
+
+  //! profile
+  &__profile {
+    position: relative;
+    display: none; // Hidden by default, shown after login
+
+    .navbar__avatar {
+      display: flex;
+      align-items: center;
+      background-color: $accent-color;
+      padding: 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1); // Slight zoom effect
+      }
+    }
+    .navbar__dropdown {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 150px;
+      background-color: $white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 10;
+      transition: visibility 1s, opacity 0.3s ease-in-out;
+
+      a {
+        display: block;
+        padding: 0.8rem 1rem;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+    &:hover .navbar__dropdown {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  //! Show profile after login
+  .navbar__auth.logged-in {
+    display: flex;
+
+    .navbar__profile {
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      display: none; // Hide login and signup buttons
+    }
+  }
+
+  .navbar__menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; // Space between icon and text
+    font-size: 1rem;
+  }
+
+  .navbar__menu a i {
+    font-size: 1.2rem; // Adjust icon size
+    color: $primary-color; // Match with your color scheme
+  }
+
+  .navbar__dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; // Space between the icon and text
+    font-size: 1rem;
+  }
+
+  .navbar__dropdown a svg,
+  .navbar__dropdown a i {
+    font-size: 1.2rem; // Icon size
+    color: $dark-color; // Match with your theme
+  }
+
+  .navbar__dropdown a:hover svg,
+  .navbar__dropdown a:hover i {
+    color: $primary-color; // Highlight on hover
   }
 }
