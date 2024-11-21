@@ -1,13 +1,14 @@
 .search {
   padding: 3rem 5%;
-  background-color: $light-color;
-
+  background: $bg-color;
+  
   &__container {
     max-width: 800px;
     margin: 2rem auto;
   }
-
+  
   &__box {
+    background-color: $light-color;
     position: relative;
     margin-bottom: 1.5rem;
 
