@@ -9,19 +9,29 @@
     <title>Sign In</title>
   </head>
   <body>
-    <header class="header">
-      <h1 class="logoContent__name">Maktaba</h1>
-    </header>
-
-    <main>
-      <div class="modal__content">
-        <h2 class="modal__title">Sign In</h2>
-        <form action="/login" method="POST">
-          <input type="text" class="modal__input" name="username" placeholder="Username" required />
-          <input type="password" class="modal__input" name="password" placeholder="Password" required />
-          <button type="submit" class="button__submit">Login</button>
-        </form>
+    <div class="container">
+      <!-- Login Form -->
+      <div class="form-box login-box">
+          <h2>Welcome!</h2>
+          <p>Log in to your account</p>
+          <form>
+              <div class="input-box">
+                  <input type="text" placeholder="Name" required>
+                  <i class="icon-user"></i>
+              </div>
+              <div class="input-box">
+                  <input type="password" placeholder="Password" required>
+                  <i class="icon-lock"></i>
+              </div>
+              <div class="options">
+                  <label>
+                      <input type="checkbox"> Remember me?
+                  </label>
+                  <a href="#">Forgot password?</a>
+              </div>
+              <button class="btn">Login →</button>
+          </form>
       </div>
-    </main>
+    </div>
   </body>
 </html>
