@@ -1,7 +1,9 @@
-// Hero Section
 .hero {
+  display: grid;
+  place-content: center;
   height: 100vh;
-  padding-top: 80px;
+  padding-top: 4rem;
+  margin-top: -5.8rem;
   background: linear-gradient(135deg, $primary-color, $secondary-color);
   position: relative;
   overflow: hidden;
@@ -22,7 +24,7 @@
     transform: translateY(30px);
     opacity: 0;
     animation: fadeInUp 1.2s ease-out forwards;
-    animation-delay: 0.5s; /* Delay to stagger the animation */
+    animation-delay: 0.5s;
   }
 
   &__subtitle {
