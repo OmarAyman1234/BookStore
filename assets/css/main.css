@@ -139,6 +139,9 @@ img, video {
   display: flex;
   gap: 1rem;
 }
+.navbar__toggle {
+  display: none;
+}
 
 .footer {
   padding: 5rem 5% 2rem;

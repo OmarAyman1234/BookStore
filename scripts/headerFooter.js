@@ -2,7 +2,7 @@ export function generateHeader() {
   let header = `
     <div class="navbar__logo logoContent">
       <img
-        src="/assets/images/logo.png"
+        src="../../assets/images/logo.png"
         alt="Maktaba Logo"
         class="logo-img rotating"
       />
@@ -18,11 +18,11 @@ export function generateHeader() {
       <button class="btn btn--secondary">Login</button>
       <button class="btn btn--primary">Sign Up</button>
     </div>
-    <!-- <div class="navbar__toggle">
+    <div class="navbar__toggle">
       <span></span>
       <span></span>
       <span></span>
-    </div> -->
+    </div>
   `;
 
   document.querySelector(".navbar").innerHTML = header;
@@ -34,7 +34,7 @@ export function generateFooter() {
         <div class="footer__about">
           <div class="footer__logo logoContent">
             <img
-              src="/assets/images/logo.png"
+              src="../../assets/images/logo.png"
               alt="Maktaba Logo"
               class="logo-img rotating"
             />
