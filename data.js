@@ -1,72 +1,30 @@
 const books = [
   {
     id: 1,
-    name: "Book 1",
-    author: "Author 1",
-    description: "Description 1",
-    image: "./assets/images/initial-book-img.png"
+    name: "Riyadh As-Salihin",
+    author: "An-Nawawi",
+    description: "",
+    image: "./assets/images/books-data/Riyadh-As-Salihin.jpg"
   },
   {
     id: 2,
-    name: "Book 2",
-    author: "Author 2",
-    description: "Description 2",
-    image: "./assets/images/initial-book-img.png"
+    name: "Sahih Al-Bukhari",
+    author: "Al-Bukhari",
+    description: "",
+    image: "./assets/images/books-data/sahih-al-bukhari.jpg"
   },
   {
     id: 3,
-    name: "Book 3",
-    author: "Author 3",
+    name: "The Translations of the Meanings of Summarized Sahih Muslim",
+    author: "Muslim",
     description: "Description 3",
-    image: "./assets/images/initial-book-img.png"
+    image: "./assets/images/books-data/summarized-sahih-muslim-meanings.jpg"
   },
   {
     id: 4,
-    name: "Book 4",
-    author: "Author 4",
+    name: "Forty Hadith of An-Nawawi",
+    author: "An-Nawawi",
     description: "Description 4",
-    image: "./assets/images/initial-book-img.png"
-  },
-  {
-    id: 5,
-    name: "Book 5",
-    author: "Author 5",
-    description: "Description 5",
-    image: "./assets/images/initial-book-img.png"
-  },
-  {
-    id: 6,
-    name: "Book 6",
-    author: "Author 6",
-    description: "Description 6",
-    image: "./assets/images/initial-book-img.png"
-  },
-  {
-    id: 7,
-    name: "Book 7",
-    author: "Author 7",
-    description: "Description 7",
-    image: "./assets/images/initial-book-img.png"
-  },
-  {
-    id: 8,
-    name: "Book 8",
-    author: "Author 8",
-    description: "Description 8",
-    image: "./assets/images/initial-book-img.png"
-  },
-  {
-    id: 9,
-    name: "Book 9",
-    author: "Author 9",
-    description: "Description 9",
-    image: "./assets/images/initial-book-img.png"
-  },
-  {
-    id: 10,
-    name: "Book 10",
-    author: "Author 10",
-    description: "Description 10",
-    image: "./assets/images/initial-book-img.png"
+    image: "./assets/images/books-data/40-Hadith-An-Nawawi.jpg"
   },
 ];
