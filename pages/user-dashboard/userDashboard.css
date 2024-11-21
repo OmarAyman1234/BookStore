@@ -289,6 +289,14 @@ body {
 .footer {
     margin-left: 260px;
 }
+
+.navbar__menu {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-right: 32rem; 
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .dashboard-grid {
@@ -306,7 +314,7 @@ body {
         margin-left: 80px;
         width: 100%;
     }
-    
+
     .logo h1, .nav-item span {
         display: none;
     }
