@@ -1,11 +1,137 @@
-body {
-    background-color: #F5F5DC ;
+:root {
+    --primary-green: #2E8B57;
+    --secondary-gold: #D4AF37;
+    --background-beige: #F5F5DC;
+    --text-dark: #333;
 }
 
-.bookimg {
-    width: 400px; /* Example image size */
-    height: auto;
-    margin: 150px;
-    position: absolute;
-    left: 20px;
+body {
+    background-color: var(--background-beige);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+}
+
+.book-container {
+    width: 85%;
+    margin: 4.8rem auto;
+    background-color: var(--primary-green);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.book-content {
+    display: flex;
+    padding: 2rem;
+}
+
+.bookImage {
+    flex: 0 0 300px;
+    margin-right: 2rem;
+}
+
+.bookImage img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.book-details {
+    flex-grow: 1;
+    color: white;
+}
+
+.book-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.book-table .category {
+    font-weight: bold;
+    width: 30%;
+    padding-right: 1rem;
+}
+
+.bookDescription {
+    margin-top: 1.5rem;
+    background-color: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.additional-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+.book-form {
+    background-color: var(--primary-green);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 40%;
+    max-width: 500px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    color: black;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.submit-btn {
+    background-color: var(--secondary-gold);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #c49a2e;
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .book-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bookImage {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .additional-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-form {
+        width: 85%;
+    }
 }
