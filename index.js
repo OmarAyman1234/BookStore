@@ -1,4 +1,4 @@
-import { generateHeader, generateFooter } from "./scripts/headerFooter.js";
+import { generateHeader, generateFooter } from "/scripts/headerFooter.js";
 
 generateHeader();
 generateFooter();

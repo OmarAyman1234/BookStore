@@ -1,3 +1,8 @@
+import { generateHeader, generateFooter } from "/scripts/headerFooter.js";
+
+//generateHeader();
+generateFooter();
+
 document.getElementById('sign-in-btn').addEventListener('click', () => {
   const formContent = document.getElementById('form-content');
   formContent.innerHTML = `
