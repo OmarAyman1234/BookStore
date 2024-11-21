@@ -1,0 +1,331 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Amiri", serif;
+    background-color: #F5F5DC;
+    padding-top: 0;
+    color: #000;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    margin-top: 5.8rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    background-color: #2E8B57;
+    color: white;
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.logo i {
+    font-size: 1.5rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item i {
+    width: 20px;
+}
+
+.logout {
+    margin-top: auto;
+    font-weight:700;
+    color: #e41736;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    margin-left: 260px;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.welcome-text h2 {
+    font-size: 1.8rem;
+    color: #2E8B57;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-text p {
+    color: #666;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notification-badge {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #D4AF37;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(46, 139, 87, 0.1);
+}
+
+.stat-card i {
+    font-size: 1.5rem;
+    color: #2E8B57;
+    background: rgba(46, 139, 87, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.stat-info h3 {
+    font-size: 1.5rem;
+    color: #2E8B57;
+    margin-bottom: 0.25rem;
+}
+
+.stat-info p {
+    color: #666;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.dashboard-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-section h3 {
+    color: #2E8B57;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Book List Styles */
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.book-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.book-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.book-item img {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-info h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    margin: 0.5rem 0;
+}
+
+.progress {
+    height: 100%;
+    background: #2E8B57;
+    border-radius: 3px;
+}
+
+.due-date {
+    color: #D4AF37;
+    font-size: 0.9rem;
+}
+
+/* Recommendations Styles */
+.recommendation-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.recommendation-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(46, 139, 87, 0.05);
+    border-radius: 8px;
+}
+
+.recommendation-card img {
+    width: 60px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.recommendation-info h4 {
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.recommendation-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    color: #D4AF37;
+    font-size: 0.9rem;
+}
+
+.rating span {
+    color: #666;
+    margin-left: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        padding: 1rem;
+    }
+
+    .logo h1, .nav-item span {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 80px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-item img {
+        width: 60px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .user-profile {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
