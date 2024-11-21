@@ -286,6 +286,9 @@ body {
     margin-left: 0.5rem;
 }
 
+.footer {
+    margin-left: 260px;
+}
 /* Responsive Design */
 @media (max-width: 1024px) {
     .dashboard-grid {
@@ -297,6 +300,11 @@ body {
     .sidebar {
         width: 80px;
         padding: 1rem;
+    }
+    /*modified the footer for mobile*/
+    .footer {
+        margin-left: 80px;
+        width: 100%;
     }
 
     .logo h1, .nav-item span {
@@ -331,6 +339,3 @@ body {
 }
 /*just for the 3abth*/
 /*عبث*/
-.footer {
-    margin-left: 260px;
-}
