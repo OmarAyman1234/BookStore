@@ -11,7 +11,7 @@ export function generateHeader() {
     <nav class="navbar__menu">
       <a href="#home" class="active">Home</a>
       <a href="#catalog">Catalog</a>
-      <a href="#about">About</a>
+      <a href="/pages/user-dashboard/userDashboard.html">About</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="navbar__auth">
