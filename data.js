@@ -4,13 +4,8 @@ export const books = [
     title: "Riyadh As-Salihin",
     author: "Imam An-Nawawi",
     description: "",
-<<<<<<< HEAD
-    image: "./assets/images/books-data/riyad.bmp",
-    topic: "Hadith"
-=======
     image: "./assets/images/books-data/Riyadh-As-Salihin.jpg",
-    category: "hadith"
->>>>>>> b11e4d0726d69afbbd074eb641e5c545f2eed02b
+    topic: "hadith"
   },
   {
     id: 2,
@@ -18,11 +13,7 @@ export const books = [
     author: "Al-Bukhari",
     description: "",
     image: "./assets/images/books-data/sahih-al-bukhari.jpg",
-<<<<<<< HEAD
     topic: "Hadith"
-=======
-    category: "hadith"
->>>>>>> b11e4d0726d69afbbd074eb641e5c545f2eed02b
   },
   {
     id: 3,
@@ -30,11 +21,7 @@ export const books = [
     author: "Muslim",
     description: "Description 3",
     image: "./assets/images/books-data/summarized-sahih-muslim-meanings.jpg",
-<<<<<<< HEAD
     topic: "Hadith"
-=======
-    category: "hadith"
->>>>>>> b11e4d0726d69afbbd074eb641e5c545f2eed02b
   },
   {
     id: 4,
@@ -42,11 +29,7 @@ export const books = [
     author: "Imam An-Nawawi",
     description: "Description 4",
     image: "./assets/images/books-data/40-Hadith-An-Nawawi.jpg",
-<<<<<<< HEAD
     topic: "Hadith"
-=======
-    category: "hadith"
->>>>>>> b11e4d0726d69afbbd074eb641e5c545f2eed02b
   },
   {
     id: 5,
@@ -54,11 +37,7 @@ export const books = [
     author: "Ibn Kathir",
     description: "",
     image: "./assets/images/books-data/Tasfir_Ibn_Kathir_Vol._2.png",
-<<<<<<< HEAD
-    topic: "tafsir"
-=======
-    categoty: "tafsir"
->>>>>>> b11e4d0726d69afbbd074eb641e5c545f2eed02b
+    topic: "quran"
   },
   {
     id: 6,
@@ -66,8 +45,7 @@ export const books = [
     author: "Abdur-Rahman Naser As-Sa'di",
     description: "",
     image: "./assets/images/books-data/tafseer-as-sa-di-10-volume-set.jpg",
-<<<<<<< HEAD
-    topic: "tafsir"
+    topic: "quran"
   },
   {
     id: 7,
@@ -83,17 +61,6 @@ export const books = [
     author: "Ibn Kathir",
     description: "",
     image: "./assets/images/books-data/riyad.bmp",
-    topic: "Quran"
-=======
-    category: "tafsir"
+    topic: "quran"
   },
-  {
-    id: 7,
-    name: "Zaad Al Ma'ad",
-    author: "Ibn Al-Qayyim",
-    description: "Zad El Maad is a profound scholarly work exploring Islamic theology, prophetic traditions, and spiritual guidance. Written by the renowned scholar Ibn Al-Qayyim, this text offers deep insights into Islamic philosophy and practice.",
-    image: "./assets/images/books-data/zad_el_maad.jpg",
-    category: "seerah"
->>>>>>> b11e4d0726d69afbbd074eb641e5c545f2eed02b
-  }
 ];
