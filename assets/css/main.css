@@ -121,6 +121,10 @@ img, video {
   text-decoration: none;
   font-weight: 500;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
 }
 .navbar__menu a::after {
   content: "";
@@ -135,16 +139,29 @@ img, video {
 .navbar__menu a:hover::after {
   width: 100%;
 }
+.navbar__menu a i {
+  font-size: 1.2rem;
+  color: #2E8B57;
+}
 .navbar__auth {
   display: flex;
   gap: 1rem;
+}
+.navbar__auth.logged-in {
+  display: flex;
+}
+.navbar__auth.logged-in .navbar__profile {
+  display: flex;
+  align-items: center;
+}
+.navbar__auth.logged-in button {
+  display: none;
 }
 .navbar__toggle {
   display: none;
 }
 .navbar__profile {
   position: relative;
-  display: none;
 }
 .navbar__profile .navbar__avatar {
   display: flex;
@@ -168,58 +185,31 @@ img, video {
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  overflow: hidden;
   z-index: 10;
   transition: visibility 1s, opacity 0.3s ease-in-out;
 }
 .navbar__profile .navbar__dropdown a {
-  display: block;
   padding: 0.8rem 1rem;
-  text-decoration: none;
   color: black;
   transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
 }
 .navbar__profile .navbar__dropdown a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-.navbar__profile:hover .navbar__dropdown {
-  visibility: visible;
-  opacity: 1;
-}
-.navbar .navbar__auth.logged-in {
-  display: flex;
-}
-.navbar .navbar__auth.logged-in .navbar__profile {
-  display: flex;
-  align-items: center;
-}
-.navbar .navbar__auth.logged-in button {
-  display: none;
-}
-.navbar .navbar__menu a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-}
-.navbar .navbar__menu a i {
-  font-size: 1.2rem;
+.navbar__profile .navbar__dropdown a:hover i {
   color: #2E8B57;
 }
-.navbar .navbar__dropdown a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-}
-.navbar .navbar__dropdown a svg,
-.navbar .navbar__dropdown a i {
+.navbar__profile .navbar__dropdown a i {
   font-size: 1.2rem;
   color: #1c1c1c;
 }
-.navbar .navbar__dropdown a:hover svg,
-.navbar .navbar__dropdown a:hover i {
-  color: #2E8B57;
+.navbar__profile:hover .navbar__dropdown {
+  visibility: visible;
+  opacity: 1;
 }
 
 .footer {
@@ -495,6 +485,78 @@ img, video {
 .search__tags .tag:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.search__results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #fff;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.search__results .result-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 0.8rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.search__results .result-item:hover {
+  background-color: #f7f7f7;
+}
+.search__results .result-item__image {
+  width: 80px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.search__results .result-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.search__results .result-item__info {
+  width: 200px;
+  flex: 1;
+}
+.search__results .result-item__info h4 {
+  font-size: 1.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+.search__results .result-item__info .author {
+  font-size: 1rem;
+  color: #555;
+}
+.search__results .result-item__info .topic-tag {
+  display: inline-block;
+  background-color: #2E8B57;
+  color: #ffffff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.search__results .result-item__info .view-details-link {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 0.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2E8B57;
+  transition: color 0.2s ease;
+}
+.search__results .result-item__info .view-details-link:hover {
+  color: #4CAF50;
 }
 
 .books {

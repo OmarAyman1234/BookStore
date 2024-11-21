@@ -38,21 +38,28 @@
           </a>
         </nav>
         <div class="navbar__auth">
-          <button class="btn btn--secondary">Login</button>
-          <button class="btn btn--primary">Sign Up</button>
+          <a href="./pages/login-register/login.html" class="btn btn--secondary"
+            >Login</a
+          >
+          <a href="./pages/login-register/signup.html" class="btn btn--primary"
+            >Sign Up</a
+          >
 
           <!-- Avatar for signed-in users -->
           <div class="navbar__profile">
-            <!-- <img
-              src="./assets/icons/person-solid.svg"
-              alt="User Avatar"
+            <a
+              href="./pages/user-dashboard/userDashboard.html"
               class="navbar__avatar"
-            /> -->
-            <a href="#" class="navbar__avatar"><i class="fas fa-user"></i></a>
+              ><i class="fas fa-user"></i
+            ></a>
 
             <div class="navbar__dropdown">
-              <a href="#profile"> <i class="fas fa-user"></i> Profile </a>
-              <a href="#logout"> <i class="fas fa-sign-out-alt"></i> Logout </a>
+              <a href="./pages/user-dashboard/userDashboard.html">
+                <i class="fas fa-user"></i> Profile
+              </a>
+              <a href="./pages/login-register/login.html">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
             </div>
           </div>
         </div>
@@ -86,18 +93,22 @@
           <div class="search__box">
             <input
               type="text"
+              id="searchInput"
               placeholder="Search for books, authors, or topics..."
             />
-            <button class="search__button">
+            <button class="search__button" id="searchButton">
               <i class="fas fa-search"></i>
             </button>
           </div>
-          <div class="search__tags">
+          <div class="search__tags" id="searchTags">
             <span class="tag">Quran</span>
             <span class="tag">Hadith</span>
             <span class="tag">Fiqh</span>
             <span class="tag">Seerah</span>
           </div>
+        </div>
+        <div class="search__results" id="searchResults">
+          <!-- search results will appear here -->
         </div>
       </section>
 
@@ -186,6 +197,6 @@
         </div>
       </footer>
     </div>
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
