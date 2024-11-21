@@ -1,66 +1,58 @@
 export const books = [
   {
     id: 1,
-    title: "Riyadh As-Salihin",
+    name: "Riyadh As-Salihin",
     author: "Imam An-Nawawi",
     description: "",
-    image: "./assets/images/books-data/Riyadh-As-Salihin.jpg",
-    topic: "hadith"
+    image: "./assets/images/books-data/riyad.bmp",
+    category: "hadith"
   },
   {
     id: 2,
-    title: "Sahih Al-Bukhari",
+    name: "Sahih Al-Bukhari",
     author: "Al-Bukhari",
     description: "",
     image: "./assets/images/books-data/sahih-al-bukhari.jpg",
-    topic: "Hadith"
+    category: "Hadith"
   },
   {
     id: 3,
-    title: "The Translations of the Meanings of Summarized Sahih Muslim",
+    name: "The Translations of the Meanings of Summarized Sahih Muslim",
     author: "Muslim",
     description: "Description 3",
     image: "./assets/images/books-data/summarized-sahih-muslim-meanings.jpg",
-    topic: "Hadith"
+    category: "Hadith"
   },
   {
     id: 4,
-    title: "40 Hadith An-Nawawi",
+    name: "40 Hadith An-Nawawi",
     author: "Imam An-Nawawi",
     description: "Description 4",
     image: "./assets/images/books-data/40-Hadith-An-Nawawi.jpg",
-    topic: "Hadith"
+    category: "Hadith"
   },
   {
     id: 5,
-    title: "Tafseer Ibn Kathir Volume 2",
+    name: "Tafseer Ibn Kathir Volume 2",
     author: "Ibn Kathir",
     description: "",
     image: "./assets/images/books-data/Tasfir_Ibn_Kathir_Vol._2.png",
-    topic: "quran"
+    category: "quran"
   },
   {
     id: 6,
-    title: "Tafseer As-Sa'di",
+    name: "Tafseer As-Sa'di",
     author: "Abdur-Rahman Naser As-Sa'di",
     description: "",
     image: "./assets/images/books-data/tafseer-as-sa-di-10-volume-set.jpg",
-    topic: "quran"
+    category: "quran"
   },
   {
     id: 7,
-    title: "Zaad Al Maa'd",
+    name: "Zaad Al Maa'd",
     author: "Ibn Al-Qayyim",
     description: "Zad El Maad is a profound scholarly work exploring Islamic theology, prophetic traditions, and spiritual guidance. Written by the renowned scholar Ibn Al-Qayyim, this text offers deep insights into Islamic philosophy and practice.",
     image: "./assets/images/books-data/zad_el_maad.jpg",
-    topic: "seerah"
-  },
-  {
-    id: 8,
-    title: "Tafsir Ibn Kathir",
-    author: "Ibn Kathir",
-    description: "",
-    image: "./assets/images/books-data/riyad.bmp",
-    topic: "quran"
-  },
+    category: "seerah"
+  }
 ];
