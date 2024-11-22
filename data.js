@@ -6,7 +6,8 @@ export const books = [
     authorInfo: "https://en.wikipedia.org/wiki/Al-Nawawi",
     description: "",
     image: "./assets/images/books-data/riyad.bmp",
-    category: "Hadith"
+    category: "Hadith",
+    reserved: false,
   },
   {
     id: 2,
@@ -15,16 +16,18 @@ export const books = [
     authorInfo: "https://en.wikipedia.org/wiki/Muhammad_al-Bukhari",
     description: "",
     image: "./assets/images/books-data/sahih-al-bukhari.jpg",
-    category: "Hadith"
+    category: "Hadith",
+    reserved: false,
   },
   {
     id: 3,
-    name: "The Translations of the Meanings of Summarized Sahih Muslim",
+    name: "Sahih Muslim",
     author: "Muslim",
     authorInfo: "https://en.wikipedia.org/wiki/Muslim_ibn_al-Hajjaj",
     description: "",
-    image: "./assets/images/books-data/summarized-sahih-muslim-meanings.jpg",
-    category: "Hadith"
+    image: "./assets/images/books-data/sahih-muslim.jpeg",
+    category: "Hadith",
+    reserved: false,
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ export const books = [
     authorInfo: "https://en.wikipedia.org/wiki/Al-Nawawi",
     description: "Description 4",
     image: "./assets/images/books-data/40-Hadith-An-Nawawi.jpg",
-    category: "Hadith"
+    category: "Hadith",
+    reserved: false,
   },
   {
     id: 5,
@@ -41,8 +45,9 @@ export const books = [
     author: "Ibn Kathir",
     authorInfo: "https://en.wikipedia.org/wiki/Ibn_Kathir",
     description: "",
-    image: "./assets/images/books-data/Tasfir_Ibn_Kathir_Vol._2.png",
-    category: "Quran"
+    image: "./assets/images/books-data/tafsir-ibn-kathir.jpg",
+    category: "Quran",
+    reserved: false,
   },
   {
     id: 6,
@@ -50,17 +55,19 @@ export const books = [
     author: "Abdur-Rahman Naser As-Sa'di",
     authorInfo: "https://en.wikipedia.org/wiki/Abdul-Rahman_al-Sa%27di",
     description: "",
-    image: "./assets/images/books-data/tafseer-as-sa-di-10-volume-set.jpg",
-    category: "Quran"
+    image: "./assets/images/books-data/tafsir-as-sa-di.jpg",
+    category: "Quran",
+    reserved: false,
   },
   {
     id: 7,
-    name: "Zaad Al Maa'd",
+    name: "Zad Al Ma'ad",
     author: "Ibn Al-Qayyim",
     authorInfo: "https://en.wikipedia.org/wiki/Ibn_Qayyim_al-Jawziyya",
     description: "Zad El Maad is a profound scholarly work exploring Islamic theology, prophetic traditions, and spiritual guidance. Written by the renowned scholar Ibn Al-Qayyim, this text offers deep insights into Islamic philosophy and practice.",
     image: "./assets/images/books-data/zad_el_maad.jpg",
-    category: "Seerah"
+    category: "Seerah",
+    reserved: false,
   }
 ];
 
