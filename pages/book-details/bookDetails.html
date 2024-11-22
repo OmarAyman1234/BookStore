@@ -3,44 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="icon" href="/assets/images/logo.png" />
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="icon" href="../../assets/images/logo.png" />
     <link rel="stylesheet" href="bookDetails.css">
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     rel="stylesheet"
     />
-    <base href="/BookStore/">
     <title>Book details</title>
   </head>
-  <body>
-    <header class="navbar"></header>    
+  <body class="book-details-body">
+    <header class="navbar">
+      <div class="navbar__logo logoContent">
+        <img
+          src="../../assets/images/logo.png"
+          alt="Maktaba Logo"
+          class="logo-img rotating"
+        />
+        <span>Maktaba</span>
+      </div>
+      <nav class="navbar__menu">
+        <a href="./pages/borrow-reserve/borrowReserve.html" class="active">Home</a>
+        <a href="./pages/catalog/catalog.html">Catalog</a>
+        <a href="./pages/user-dashboard/userDashboard.html">About</a>
+        <a href="./pages/book-details/bookDetails.html">Contact</a>
+      </nav>
+      <div class="navbar__auth">
+        <button class="btn btn--secondary">Login</button>
+        <button class="btn btn--primary">Sign Up</button>
+      </div>
+      <div class="navbar__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>    
 
-    <div class="details-content">
+    <div  class="details-content">
+
       <div class="details-details-container">
-        <div class="details-book-img-container">
-          <img class="details-book-img" src="/assets/images/books-data/40-Hadith-An-Nawawi.jpg" alt="">
-        </div>
+        <img class="details-book-img" src="../../assets/images/books-data/zad_el_maad.jpg" alt="">
         <div class="details-book-info">
-          <h2>40 Hadith An-Nawawi</h2>
-          <p>An-Nawawi</p>
-          <p class="details-book-description"></p>
-  
+          <div>
+            <h2>Zad Al Ma'ad</h2>
+            <a class="details-book-info-author" href="https://en.wikipedia.org/wiki/Ibn_Qayyim_al-Jawziyya" target="_blank">Ibn Al-Qayyim</a>
+          </div>
+          <p class="details-book-description">Zad El Maad is a profound scholarly work exploring Islamic theology, prophetic traditions, and spiritual guidance. Written by the renowned scholar Ibn Al-Qayyim, this text offers deep insights into Islamic philosophy and practice.</p>
         </div>
       </div>
+
+      <a class="details-btn-link" href="../borrow-reserve/borrowReserve.html">
+        <button class="details-borrow-reserve-btn">Borrow/Reserve Book</button>
+      </a>
   
       <div class="details-related-books">
         <h2>Related Books</h2>
         <div class="details-related-books-container">
+
           <div class="details-related-book-container">
-            <img class="details-related-book-img" src="/assets/images/books-data/sahih-al-bukhari.jpg" alt="">
+            <img class="details-related-book-img" src="../../assets/images/books-data/sahih-al-bukhari.jpg" alt="">
+            <h3>Book name</h3>
+            <p>Author</p>
+          </div>
+
+          <div class="details-related-book-container">
+            <img class="details-related-book-img" src="../../assets/images/books-data/sahih-al-bukhari.jpg" alt="">
+            <h3>Book name</h3>
+            <p>Author</p>
+          </div>
+
+          <div class="details-related-book-container">
+            <img class="details-related-book-img" src="../../assets/images/books-data/sahih-al-bukhari.jpg" alt="">
+            <h3>Book name</h3>
+            <p>Author</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <div class="footer__logo logoContent">
+            <img
+              src="../../assets/images/logo.png"
+              alt="Maktaba Logo"
+              class="logo-img rotating"
+            />
+            <span>Maktaba</span>
+          </div>
+          <p>Maktaba is your gateway to authentic Islamic knowledge</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <a href="./index.html">Home</a>
+          <a href="./pages/catalog/catalog.html">Catalog</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@maktaba.com</p>
+          <p>Phone: +1 234 567 890</p>
+        </div>
+        <div class="footer__social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
-  
-    </div>
-    
-    <footer class="footer"></footer> 
-    <script src="/pages/book-details/bookDetails.js" type="module"></script>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Maktaba. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="bookDetails.js"></script>
   </body>
 </html>

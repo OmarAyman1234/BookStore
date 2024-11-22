@@ -1,24 +1,94 @@
-.details-content {
-  margin: 40px 40px 0 40px;
+/* 
+  Primary color: #2E8B57 emerald green; used for: nav bars, headers, call to action buttons
+  Secondary color: #F5F5DC beige; used for backgrounds, cards, book details, 
+  Accent color: #D4AF37 deep Gold; used for: highlights, and important information.
+  Writings : Black.
+*/
+
+.book-details-body {
+  background: rgb(245, 245, 220);
 }
-.details-details-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 50px;
+.details-content {
+  padding: 3rem 3rem 0 3rem;
 }
 
+.details-details-container {
+  display: flex;
+  margin-left: 5rem;
+  margin-right: 5rem;
+
+}
 .details-book-img {
-  width: 100%;
-  height: 400px;
+  max-height: 300px;
+  max-width: 40%;
+  margin-right: 3rem;
   object-fit: contain;
+  float: left;
 }
 
 .details-book-info {
-  margin-top: 30px;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details-btn-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+}
+.details-borrow-reserve-btn {
+  width: 70%;
+  background-color: #efbf20;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.15s;
+}
+.details-borrow-reserve-btn:hover {
+  background-color: #d7ad22;
+}
+.details-borrow-reserve-btn:active {
+  background-color: #efbf20;
+}
+
+.details-related-books {
+  margin-bottom: 3rem;
+}
+.details-book-info h2 {
+  font-size: 2rem;
+}
+.details-related-books h2 {
+  margin-bottom: 20px;
+}
+
+.details-book-info-author {
+  color: #2E8B57;
+  font-weight: bold;
+  transition: all 0.15s;
+}
+.details-book-info-author:hover {
+  text-decoration: underline;
+  color: #287a4c;
+}
+
+.details-related-books-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.details-related-book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .details-related-book-img {
-  width: 250px;
-  height: 300px;
+  max-width: 300px;
+  max-height: 175px;
   object-fit: contain;
 }

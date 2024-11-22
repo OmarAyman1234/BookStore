@@ -3,39 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="icon" href="/assets/images/logo.png" />
-    <link rel="stylesheet" href="/pages/user-dashboard/userDashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="icon" href="../../assets/images/logo.png" />
+    <link rel="stylesheet" href="./userDashboard.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <title>User Dashboard</title>
-    <base href="/BookStore"/>
+    <!--<base href="/BookStore" /> what is that bro?-->
   </head>
   <body>
     <header class="navbar">
       <div class="navbar__logo logoContent">
         <img
-          src="/assets/images/logo.png"
+          src="../../assets/images/logo.png"
           alt="Maktaba Logo"
           class="logo-img rotating"
         />
         <span>Maktaba</span>
       </div>
       <nav class="navbar__menu">
-        <a href="#home" class="active">Home</a>
-        <a href="#catalog">Catalog</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="./pages/borrow-reserve/borrowReserve.html" class="active">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="./pages/catalog/catalog.html">
+          <i class="fas fa-book"></i> Catalog
+        </a>
+        <a href="./pages/user-dashboard/userDashboard.html">
+          <i class="fas fa-user"></i> About
+        </a>
+        <a href="./pages/book-details/bookDetails.html">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
       </nav>
-      <!--<div class="navbar__auth">
-        <button class="btn btn--secondary">Login</button>
-        <button class="btn btn--primary">Sign Up</button>
-      </div>-->
+      <div class="navbar__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
     <!----------------------------------------------------------------->
-    <!-- My Part -->
+    <!------------------------------ My Part -------------------------->
+
     <div class="dashboard-container">
       <!-- Sidebar -->
       <aside class="sidebar">
@@ -79,6 +89,21 @@
             <span class="notification-badge">
               <i class="fas fa-bell"></i>
               <span class="badge">3</span>
+              <div class="notifications-dropdown">
+                <div class="notification-item">
+                  A new book recommendation for you!.
+                </div>
+                <div class="notification-item">
+                  MashAllah you have completed 50% of the book.
+                </div>
+                <div class="notification-item">
+                  Reminder: you hav 15 saved book, check them out, brother
+                  ahmed.
+                </div>
+                <button class="mark-read-btn" onclick="markAsRead()">
+                  Mark All as Read
+                </button>
+              </div>
             </span>
             <img
               src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?auto=format&fit=crop&q=80&w=50&h=50"
@@ -194,8 +219,45 @@
         </div>
       </main>
     </div>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <div class="footer__logo logoContent">
+            <img
+              src="../../assets/images/logo.png"
+              alt="Maktaba Logo"
+              class="logo-img rotating"
+            />
+            <span>Maktaba</span>
+          </div>
+          <p>Maktaba is your gateway to authentic Islamic knowledge</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <a href="./index.html">Home</a>
+          <a href="./pages/catalog/catalog.html">Catalog</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@maktaba.com</p>
+          <p>Phone: +1 234 567 890</p>
+        </div>
+        <div class="footer__social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Maktaba. All rights reserved.</p>
+      </div>
+    </footer>
 
-    <script src="/pages/user-dashboard/userDashboard.js" type="module"></script>
+    <script src="./userDashboard.js"></script>
   </body>
 </html>
