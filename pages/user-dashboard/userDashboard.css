@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+.navbar__menu {
+    padding-right: 24.2rem;
+}
+
 body {
     background-color: #F5F5DC;
     padding-top: 0;
