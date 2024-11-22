@@ -16,8 +16,8 @@
   display: flex;
   margin-left: 5rem;
   margin-right: 5rem;
-
 }
+
 .details-book-img {
   max-height: 300px;
   max-width: 40%;
@@ -39,27 +39,27 @@
   justify-content: center;
   width: 100%;
   margin-top: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .details-borrow-reserve-btn {
   width: 70%;
-  background-color: #efbf20;
+  background-color: #2E8B57;
   padding: 10px;
   border-radius: 10px;
-  color: black;
+  color: white;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.15s;
 }
 .details-borrow-reserve-btn:hover {
-  background-color: #d7ad22;
+  background-color: #36a466;
 }
 .details-borrow-reserve-btn:active {
-  background-color: #efbf20;
+  background-color: #2E8B57;
 }
 
 .details-related-books {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .details-book-info h2 {
   font-size: 2rem;
@@ -69,13 +69,13 @@
 }
 
 .details-book-info-author {
-  color: #2E8B57;
+  color: #D4AF37;
   font-weight: bold;
   transition: all 0.15s;
 }
 .details-book-info-author:hover {
   text-decoration: underline;
-  color: #287a4c;
+  color: #e2bb3b;
 }
 
 .details-related-books-container {
@@ -86,9 +86,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 .details-related-book-img {
   max-width: 300px;
   max-height: 175px;
   object-fit: contain;
+}
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .details-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .details-content {
+    padding: 1.5rem 0.5rem 0 0.5rem;
+  }
+  .details-book-img {
+    max-height: 250px;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    float: none;
+  }
+  
+  .details-book-info {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .details-related-books-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(min-width: 600px) and (max-width: 768px) {
+  .details-related-books-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
