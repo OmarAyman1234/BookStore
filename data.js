@@ -1,10 +1,10 @@
-const books = [
+export const books = [
   {
     id: 1,
     name: "Riyadh As-Salihin",
-    author: "An-Nawawi",
+    author: "Imam An-Nawawi",
     description: "",
-    image: "./assets/images/books-data/Riyadh-As-Salihin.jpg",
+    image: "./assets/images/books-data/riyad.bmp",
     category: "hadith"
   },
   {
@@ -13,7 +13,7 @@ const books = [
     author: "Al-Bukhari",
     description: "",
     image: "./assets/images/books-data/sahih-al-bukhari.jpg",
-    category: "hadith"
+    category: "Hadith"
   },
   {
     id: 3,
@@ -21,15 +21,15 @@ const books = [
     author: "Muslim",
     description: "Description 3",
     image: "./assets/images/books-data/summarized-sahih-muslim-meanings.jpg",
-    category: "hadith"
+    category: "Hadith"
   },
   {
     id: 4,
-    name: "Forty Hadith of An-Nawawi",
-    author: "An-Nawawi",
+    name: "40 Hadith An-Nawawi",
+    author: "Imam An-Nawawi",
     description: "Description 4",
     image: "./assets/images/books-data/40-Hadith-An-Nawawi.jpg",
-    category: "hadith"
+    category: "Hadith"
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const books = [
     author: "Ibn Kathir",
     description: "",
     image: "./assets/images/books-data/Tasfir_Ibn_Kathir_Vol._2.png",
-    categoty: "tafsir"
+    category: "quran"
   },
   {
     id: 6,
@@ -45,6 +45,14 @@ const books = [
     author: "Abdur-Rahman Naser As-Sa'di",
     description: "",
     image: "./assets/images/books-data/tafseer-as-sa-di-10-volume-set.jpg",
-    category: "tafsir"
+    category: "quran"
+  },
+  {
+    id: 7,
+    name: "Zaad Al Maa'd",
+    author: "Ibn Al-Qayyim",
+    description: "Zad El Maad is a profound scholarly work exploring Islamic theology, prophetic traditions, and spiritual guidance. Written by the renowned scholar Ibn Al-Qayyim, this text offers deep insights into Islamic philosophy and practice.",
+    image: "./assets/images/books-data/zad_el_maad.jpg",
+    category: "seerah"
   }
 ];
