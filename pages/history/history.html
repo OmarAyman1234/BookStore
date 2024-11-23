@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
     <title>Islamic History</title>
     <style>
       body {
         background: #f5f5dc;
         color: #333333;
         min-height: 100vh;
-        padding: 2rem;
       }
 
       .header {
@@ -16,7 +19,6 @@
         margin-bottom: 3rem;
         padding: 2rem;
         background: linear-gradient(135deg, #2e8b57, #4caf50);
-        border-radius: 1rem;
         box-shadow: 0 4px 15px rgba(46, 139, 87, 0.4);
         animation: fadeIn 1.5s ease-out;
       }
@@ -41,6 +43,7 @@
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 2rem;
         margin-bottom: 3rem;
+        padding: 2rem;
       }
 
       .era-card {
@@ -115,8 +118,8 @@
         transition: transform 0.3s ease;
 
         &:hover {
-        transform: scale(1.05);
-      }
+          transform: scale(1.05);
+        }
       }
 
       .achievement-title {
@@ -126,7 +129,7 @@
       }
 
       .timeline {
-        margin: 2rem 0;
+        margin: 2rem;
         padding: 2rem;
         background: #ffffff;
         border-radius: 1rem;
@@ -192,7 +195,64 @@
   </head>
   <body>
     <div class="container">
-      <div class="pattern"></div>
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="navbar__logo logoContent">
+          <img
+            src="../../assets/images/logo.png"
+            alt="Maktaba Logo"
+            class="logo-img rotating"
+          />
+          <span>Maktaba</span>
+          <!-- <a href="../../index.html"><span>Maktaba</span></a> put this tag -->
+        </div>
+        <nav class="navbar__menu">
+          <a href="../borrow-reserve/borrowReserve.html" class="active">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="../catalog/catalog.html">
+            <i class="fas fa-book"></i> Catalog
+          </a>
+          <a href="../user-dashboard/userDashboard.html">
+            <i class="fas fa-user"></i> About
+          </a>
+          <a href="../book-details/bookDetails.html">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
+        </nav>
+        <div class="navbar__auth">
+          <a href="../login-register/login.html" class="btn btn--secondary"
+            >Login</a
+          >
+          <a href="../login-register/signup.html" class="btn btn--primary"
+            >Sign Up</a
+          >
+
+          <!-- Avatar for signed-in users -->
+          <div class="navbar__profile">
+            <a
+              href="../user-dashboard/userDashboard.html"
+              class="navbar__avatar"
+              ><i class="fas fa-user"></i
+            ></a>
+
+            <div class="navbar__dropdown">
+              <a href="../user-dashboard/userDashboard.html">
+                <i class="fas fa-user"></i> Profile
+              </a>
+              <a href="../login-register/login.html">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar__toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
       <header class="header">
         <h1 class="title">Islamic History</h1>
         <p class="subtitle">
