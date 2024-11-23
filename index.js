@@ -34,7 +34,7 @@ function displayResults(results) {
     const resultHTML = `
       <div class="result-item">
         <div class="result-item__image">
-          <img src="${item.image || "./assets/images/book.png"}" alt="${
+          <img src="./assets/images/${item.image || "book.png"}" alt="${
       item.name
     }" />
         </div>

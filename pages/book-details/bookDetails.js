@@ -10,7 +10,9 @@ if(bookId) {
   const detailsContainer = document.querySelector(".details-details-container");
 
   let foundBookHTML = `
-      <img class="details-book-img" src="../../assets/images/books-data/${foundBook.image}" alt="book img">
+      <div class="details-book-img-container">
+        <img class="details-book-img" src="../../assets/images/${foundBook.image}" alt="${foundBook.name}">
+      </div>
       <div class="details-book-info">
         <div>
           <h2>${foundBook.name}</h2>
@@ -28,14 +30,32 @@ if(bookId) {
   console.log(relatedBooks);
 
   let relatedBooksHTML = ``;
-  relatedBooks.forEach(book => {
-    relatedBooksHTML += `
-      <div class="details-related-book-container">
-        <img class="details-related-book-img" src="${book.image}" alt="book img">
-        <h3>${book.name}</h3>
-        <p>${book.author}</p>
-      </div>
-    `;
-  });
+  if(relatedBooks.length > 0) {
+    relatedBooks.forEach(book => {
+      relatedBooksHTML += `
+        <div class="details-related-book-container" data-book-id="${book.id}">
+          <img class="details-related-book-img" src="../../assets/images/${book.image}" alt="book.name">
+          <h3>${book.name}</h3>
+          <p>${book.author}</p>
+        </div>
+      `;
+    });
+  }
+  else {
+    relatedBooksHTML = "<p>There are no related books at the moment.</p>";
+  }
   relatedBooksContainer.innerHTML = relatedBooksHTML;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.addEventListener('click', (event) => {
+      /*closest()  ensures that the container is always found even if the 
+      click target is a child element like img or h3*/
+      const book = event.target.closest('.details-related-book-container'); 
+      if(book) {
+        const bookId = book.dataset.bookId;
+  
+        window.location.href = `./bookDetails.html?bookId=${bookId}`;
+      }
+    });
+  })
 }
