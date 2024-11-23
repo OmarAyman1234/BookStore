@@ -52,7 +52,7 @@
   color: #e2bb3b;
 }
 
-.details-btn-link {
+.details-btn-container {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -67,7 +67,7 @@
   color: white;
   cursor: pointer;
   font-weight: bold;
-  transition: all 0.15s;
+  transition: all 0.2s;
 }
 .details-borrow-reserve-btn:hover {
   background-color: #36a466;

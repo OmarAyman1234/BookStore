@@ -9,6 +9,7 @@ if(bookId) {
   
   const detailsContainer = document.querySelector(".details-details-container");
 
+  //Display found book
   let foundBookHTML = `
       <div class="details-book-img-container">
         <img class="details-book-img" src="../../assets/images/${foundBook.image}" alt="${foundBook.name}">
@@ -23,11 +24,28 @@ if(bookId) {
   `;
   detailsContainer.innerHTML = foundBookHTML;
 
-  
-  const relatedBooksContainer = document.querySelector(".details-related-books-container");
 
+  //Display the borrow borrow/reserve button dynamically to get the book id
+  const buttonContainer = document.querySelector('.details-btn-container');
+  if(buttonContainer) {
+    buttonContainer.innerHTML = `
+      <button class="details-borrow-reserve-btn" data-book-id=${foundBook.id}>
+        Borrow/Reserve Book
+      </button>
+    `;
+
+    document.body.addEventListener('click', (event) => {
+      if(event.target.classList.contains('details-borrow-reserve-btn')) {
+        const bookId = event.target.dataset.bookId;
+
+        window.location.href = `../borrow-reserve/borrowReserve.html?bookId=${bookId}`;
+      }
+    });
+  }
+  
+  //Display related books
+  const relatedBooksContainer = document.querySelector(".details-related-books-container");
   const relatedBooks = getRelatedBooks(bookId);
-  console.log(relatedBooks);
 
   let relatedBooksHTML = ``;
   if(relatedBooks.length > 0) {
