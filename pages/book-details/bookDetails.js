@@ -7,6 +7,9 @@ const bookId = params.get("bookId");
 if(bookId) {
   const foundBook = getBook(bookId);
   
+  //Change the page's title based on the book's name
+  document.title = foundBook.name;
+  
   const detailsContainer = document.querySelector(".details-details-container");
 
   //Display found book

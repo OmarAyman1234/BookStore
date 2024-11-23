@@ -44,7 +44,7 @@ export const books = [
     name: "Tafsir Ibn Kathir",
     author: "Ibn Kathir",
     authorInfo: "https://en.wikipedia.org/wiki/Ibn_Kathir",
-    description: "Tafsīr al-Qurʾān al-ʿAẓīm, commonly known as Tafsir Ibn Kathir is one of the most famous Islamic books concerned with the science of interpretation of the Quran written by Imam Ibn Kathir (rahimahullah).",
+    description: "Tafsīr al-Qurʾān al-ʿAẓīm, commonly known as Tafsir Ibn Kathir is one of the most famous Islamic books concerned with the science of interpretation of the Quran, written by Imam Ibn Kathir (rahimahullah).",
     image: "books-data/tafsir-ibn-kathir.jpg",
     category: "Quran",
     reserved: false,

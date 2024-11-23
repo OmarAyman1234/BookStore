@@ -4,7 +4,6 @@
   Accent color: #D4AF37 deep Gold; used for: highlights, and important information.
   Writings : Black.
 */
-
 .book-details-body {
   background: rgb(245, 245, 220);
 }
@@ -26,8 +25,10 @@
 
   min-width: 350px;
   max-width: 400px;
-  margin-right: 0.5rem;
+
   max-height: 300px;
+  
+  margin-right: 0.5rem;
 }
 .details-book-img {
   max-width: 100%;
@@ -55,18 +56,22 @@
 .details-btn-container {
   display: flex;
   justify-content: center;
+  
   width: 100%;
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
 .details-borrow-reserve-btn {
   width: 70%;
+  font-weight: bold;
+
+  color: white;
   background-color: #2E8B57;
+
   padding: 10px;
   border-radius: 10px;
-  color: white;
   cursor: pointer;
-  font-weight: bold;
+
   transition: all 0.2s;
 }
 .details-borrow-reserve-btn:hover {
@@ -97,15 +102,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin-bottom: 1.5rem;
   border-radius: 10px;
   cursor: pointer;
+
   transition: all 0.2s;
 }
 .details-related-book-container:hover {
-  background-color: hsla(46, 61%, 38%, 0.141);
+  background-color: rgba(46, 139, 86, 0.2);
   transform: scale(110%);
 }
+
 .details-related-book-img {
   max-width: 300px;
   max-height: 175px;
@@ -135,9 +143,9 @@
   .details-book-img {
     max-height: 250px;
     max-width: 100%;
+
     margin-right: 0;
     margin-bottom: 0.5rem;
-    float: none;
   }
   
   .details-book-info {

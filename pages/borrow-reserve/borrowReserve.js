@@ -25,6 +25,9 @@ const bookId = params.get("bookId");
 
 if(bookId) {
     const foundBook = getBook(bookId);
+    
+    //Change the page's title based on the book's name
+    document.title = `Borrow/Reserve ${foundBook.name}`;
 
     const bookContainer = document.querySelector('.book-container');
     bookContainer.innerHTML = `
