@@ -49,12 +49,7 @@ function displayResults(results) {
 
     resultsHTML += resultHTML;
   });
-  /*Old <a> tag which I replaced with a button to make the navigation easier: 
-
-    <a href="./book-details/bookDetails.html?title=${encodeURIComponent(item.name)}" 
-    class="view-details-link">View Details</a>
-
-  */
+  
   searchResults.innerHTML = resultsHTML;
 }
 

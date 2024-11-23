@@ -77,7 +77,6 @@
       border-bottom: 1px solid #f0f0f0;
       border-radius: .8rem;
       padding-bottom: 1rem;
-      cursor: pointer;
       transition: background-color 0.2s;
 
       &:hover {
@@ -111,23 +110,22 @@
         }
 
         & .topic-tag {
-          display: inline-block;
           background-color: $primary-color;
           color: $white;
           padding: 0.3rem 0.6rem;
           border-radius: 20px;
           margin-top: 0.5rem;
           font-size: 0.9rem;
+          cursor: default;
         }
 
         & .view-details-link {
-          display: inline-block;
           margin-top: 1rem;
           margin-left: 0.4rem;
           font-weight: bold;
-          text-decoration: none;
           color: $primary-color;
           transition: color 0.2s ease;
+          cursor: pointer;
           &:hover {
             color: $secondary-color;
           }

@@ -505,7 +505,6 @@ img, video {
   border-bottom: 1px solid #f0f0f0;
   border-radius: 0.8rem;
   padding-bottom: 1rem;
-  cursor: pointer;
   transition: background-color 0.2s;
 }
 .search__results .result-item:hover {
@@ -538,22 +537,21 @@ img, video {
   color: #555;
 }
 .search__results .result-item__info .topic-tag {
-  display: inline-block;
   background-color: #2E8B57;
   color: #ffffff;
   padding: 0.3rem 0.6rem;
   border-radius: 20px;
   margin-top: 0.5rem;
   font-size: 0.9rem;
+  cursor: default;
 }
 .search__results .result-item__info .view-details-link {
-  display: inline-block;
   margin-top: 1rem;
   margin-left: 0.4rem;
   font-weight: bold;
-  text-decoration: none;
   color: #2E8B57;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 .search__results .result-item__info .view-details-link:hover {
   color: #4CAF50;
@@ -604,6 +602,7 @@ img, video {
 }
 .book-card__info {
   padding: 1.5rem;
+  padding-bottom: 0;
   text-align: center;
 }
 .book-card__info h3 {
@@ -614,6 +613,9 @@ img, video {
 .book-card__info p {
   color: #5fb662;
   margin-bottom: 1rem;
+}
+.book-card__info a {
+  display: inline-block;
 }
 
 .btn {
