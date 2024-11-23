@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>Islamic History</title>
+    <style>
+      body {
+        background: #f5f5dc;
+        color: #333333;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: linear-gradient(135deg, #2e8b57, #4caf50);
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px rgba(46, 139, 87, 0.4);
+        animation: fadeIn 1.5s ease-out;
+      }
+
+      .title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        color: #ffffff;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .era-card {
+        background: #ffffff;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideInCards 0.5s ease-out forwards;
+        border-top: 4px solid #2e8b57;
+        transition: transform 0.3s ease;
+      }
+
+      .era-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .era-card:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .era-card:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+
+      .era-card h3 {
+        color: #2e8b57;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .era-card h4 {
+        color: #4caf50;
+        margin: 1rem 0 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      .era-card p {
+        color: #333333;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+      }
+
+      .key-events {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: rgba(165, 214, 167, 0.2);
+        border-radius: 0.5rem;
+        border-left: 4px solid #4caf50;
+      }
+
+      .key-events li {
+        margin-bottom: 0.5rem;
+        color: #333333;
+        list-style-position: inside;
+        padding-left: 0.5rem;
+      }
+
+      .achievements {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(46, 139, 87, 0.2);
+      }
+
+      .achievement {
+        flex: 1;
+        text-align: center;
+        padding: 1rem;
+        background: #f5f5f5;
+        border-radius: 0.5rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+        transform: scale(1.05);
+      }
+      }
+
+      .achievement-title {
+        color: #2e8b57;
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+      }
+
+      .timeline {
+        margin: 2rem 0;
+        padding: 2rem;
+        background: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 2s ease-out;
+      }
+
+      .timeline-item {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+        border-left: 3px solid #2e8b57;
+        position: relative;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -9px;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        background: #4caf50;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+      }
+
+      .timeline-year {
+        color: #2e8b57;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      @keyframes slideInCards {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .title {
+          font-size: 2.5rem;
+        }
+        .achievements {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pattern"></div>
+      <header class="header">
+        <h1 class="title">Islamic History</h1>
+        <p class="subtitle">
+          Explore the magnificent journey of Islamic civilization through time,
+          discovering the rich heritage of knowledge, culture, and achievements
+          that shaped our world.
+        </p>
+      </header>
+
+      <div class="grid">
+        <div class="era-card">
+          <h3>The Prophet's Era (570-632 CE)</h3>
+          <p>
+            The divine period that marked the beginning of Islam under the
+            guidance of Prophet Muhammad ﷺ, establishing the foundations of
+            Islamic faith and society.
+          </p>
+          <div class="key-events">
+            <h4>Significant Events</h4>
+            <ul>
+              <li>The First Revelation (610 CE)</li>
+              <li>Hijra to Medina (622 CE)</li>
+              <li>The Constitution of Medina</li>
+              <li>Conquest of Mecca (630 CE)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="era-card">
+          <h3>The Golden Age (750-1258 CE)</h3>
+          <p>
+            A period of remarkable scientific and cultural achievements, where
+            Islamic civilization led the world in innovation and learning.
+          </p>
+          <div class="achievements">
+            <div class="achievement">
+              <div class="achievement-title">Sciences</div>
+              <p>Mathematics & Medicine</p>
+            </div>
+            <div class="achievement">
+              <div class="achievement-title">Culture</div>
+              <p>Literature & Arts</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="era-card">
+          <h3>Islamic Sciences</h3>
+          <p>
+            The development of various Islamic sciences that formed the backbone
+            of religious and scholarly tradition.
+          </p>
+          <div class="key-events">
+            <h4>Key Disciplines</h4>
+            <ul>
+              <li>Quranic Sciences</li>
+              <li>Hadith Studies</li>
+              <li>Islamic Jurisprudence</li>
+              <li>Arabic Language Studies</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="era-card">
+          <h3>Cultural Achievements</h3>
+          <p>
+            The flourishing of arts, architecture, and literature that created a
+            distinctive Islamic cultural identity.
+          </p>
+          <div class="key-events">
+            <h4>Notable Contributions</h4>
+            <ul>
+              <li>Islamic Architecture</li>
+              <li>Calligraphic Arts</li>
+              <li>Poetry and Literature</li>
+              <li>Scientific Manuscripts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h3 style="color: #2e8b57; margin-bottom: 1rem">
+          Major Historical Developments
+        </h3>
+        <div class="timeline-item">
+          <div class="timeline-year">7th Century</div>
+          <p>Establishment of Islamic State and Early Expansions</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">8th-9th Century</div>
+          <p>Translation Movement and Scientific Renaissance</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">10th-11th Century</div>
+          <p>Peak of Islamic Scientific and Cultural Achievement</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">12th-13th Century</div>
+          <p>Spread of Islamic Learning to Europe</p>
+        </div>
+      </div>
+    </div>
+    <div class="decoration"></div>
+  </body>
+</html>
