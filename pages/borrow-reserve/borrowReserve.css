@@ -15,7 +15,7 @@ body {
 
 .book-container {
     width: 85%;
-    margin: 4.8rem auto;
+    margin: 5.8rem auto;
     background-color: var(--primary-green);
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -71,12 +71,13 @@ body {
 }
 
 .book-form {
-    background-color: var(--primary-green);
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     padding: 2rem;
     border-radius: 10px;
     width: 40%;
     max-width: 500px;
-    color: white;
+    color: black;
 }
 
 .form-group {
@@ -86,7 +87,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: white;
+    color: black;
 }
 
 .form-group input,
@@ -100,7 +101,7 @@ body {
 }
 
 .submit-btn {
-    background-color: var(--secondary-gold);
+    background-color: var(--primary-green);
     color: var(--text-dark);
     border: none;
     padding: 0.75rem;
@@ -111,7 +112,7 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #c49a2e;
+    background-color: green;
     transform: scale(1.02);
 }
 /* .btn{
