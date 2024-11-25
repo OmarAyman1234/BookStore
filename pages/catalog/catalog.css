@@ -4,80 +4,56 @@
   --deep-Gold: #d4af37;
 }
 
-/* Styles for the search section */
-.search-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
+body {
   background-color: var(--beige);
-  /* border-bottom: 1px solid var(--deep-Gold); */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar {
-  flex: 1;
-  max-width: 600px;
-  padding: 10px 15px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  color: #333;
-  transition: border-color 0.2s;
+/* Styles for the search section */
+.search {
+  padding-bottom: 1rem;
+  background-color: var(--beige);
 }
 
-.search-bar:focus {
-  border-color: #000;
-  outline: none;
+.fa-search {
+  padding-inline: .2rem;
+  &:hover {
+    scale: 1.1;
+  }
+
 }
 
-.search-button {
-  padding: 10px 20px;
-  background-color: var(--emerald-green);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.search-button:hover {
-  background-color: #0056b3;
-}
-
-/* Styles for the sort options section */
+/* SCSS Styling for Sort Options */
 .sort-options {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-  background-color: var(--beige);
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: var(--emerald-green);
+  }
+
+  select {
+    padding: .3rem;
+    border: 1px solid var(--deep-Gold);
+    border-radius: 5px;
+    background-color: var(--beige);
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--emerald-green);
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px var(--deep-Gold)7;
+    }
+  }
 }
 
-.sort-options label {
-  font-size: 1rem;
-  color: #333;
-}
-
-.sort-options select {
-  padding: 8px 12px;
-  font-size: 1rem;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  cursor: pointer;
-  transition: border-color 0.2s;
-}
-
-.sort-options select:focus {
-  border-color: var(--emerald-green);
-  outline: none;
-}
 
 /* Styles for the book grid */
 .book-grid {
@@ -101,6 +77,13 @@
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
+
+  & img {
+    object-fit: cover;
+    border-radius: .2rem;
+    height: 280px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .book-card:hover {
