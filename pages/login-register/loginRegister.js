@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
 
   updateUI();
 
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 });
 
 // document.getElementById('sign-in-btn').addEventListener('click', () => {
