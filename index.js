@@ -3,25 +3,33 @@ import { books } from "./data.js";
 const navbarToggle = document.querySelector(".navbar__toggle");
 const navbar = document.querySelector(".navbar");
 
-const searchInput = document.getElementById("searchInput");
-const searchTags = document.getElementById("searchTags");
-const searchResults = document.getElementById("searchResults");
-
-const loginButton = document.querySelector(".btn--secondary");
-const navbarAuth = document.querySelector(".navbar__auth");
-
 navbarToggle.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
 
-// Simulate login
-loginButton.addEventListener("click", () => {
-  navbarAuth.classList.add("logged-in"); // Add the logged-in class
-});
+/* -------------------------------------------------------------------- */
+const isSignedIn = localStorage.getItem("isSignedIn") === "true";
+
+if (isSignedIn) {
+  const signInBtn = document.getElementById("signInBtn");
+  const signUpBtn = document.getElementById("signUpBtn");
+  const userAvatar = document.getElementById("userAvatar");
+
+  // Hide sign-in button and show the person icon
+  signInBtn.style.display = "none";
+  signUpBtn.style.display = "none";
+  userAvatar.style.display = "inline-block";
+}
+/* ------------------------------------------------------------------ */
+
+const searchInput = document.getElementById("searchInput");
+const searchTags = document.getElementById("searchTags");
+const searchResults = document.getElementById("searchResults");
 
 // Function to display search results
 function displayResults(results) {
   searchResults.innerHTML = ""; // Clear previous results
+  searchResults.style.padding = "1.5rem";
 
   if (results.length === 0) {
     searchResults.innerHTML = "<p>No results found.</p>";
@@ -42,14 +50,16 @@ function displayResults(results) {
           <h4>${item.name}</h4>
           <p class="author">By: ${item.author}</p>
           <span class="topic-tag">${item.category}</span>
-          <button class="view-details-link" data-button-id="${item.id}">View Details</button>
+          <button class="view-details-link" data-button-id="${
+            item.id
+          }">View Details</button>
         </div>
       </div>
     `;
 
     resultsHTML += resultHTML;
   });
-  
+
   searchResults.innerHTML = resultsHTML;
 }
 

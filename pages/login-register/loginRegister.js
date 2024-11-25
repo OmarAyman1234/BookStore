@@ -1,3 +1,15 @@
+const form = document.getElementById('loginForm');
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+
+  localStorage.setItem("isSignedIn", "true");
+
+  updateUI();
+
+  window.location.href = "home.html";
+});
+
 // document.getElementById('sign-in-btn').addEventListener('click', () => {
 //   const formContent = document.getElementById('form-content');
 //   formContent.innerHTML = `

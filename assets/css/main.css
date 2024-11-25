@@ -147,21 +147,12 @@ img, video {
   display: flex;
   gap: 1rem;
 }
-.navbar__auth.logged-in {
-  display: flex;
-}
-.navbar__auth.logged-in .navbar__profile {
-  display: flex;
-  align-items: center;
-}
-.navbar__auth.logged-in button {
-  display: none;
-}
 .navbar__toggle {
   display: none;
 }
 .navbar__profile {
   position: relative;
+  display: none;
 }
 .navbar__profile .navbar__avatar {
   display: flex;
@@ -488,14 +479,12 @@ img, video {
 }
 .search__results {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 1.5rem;
   background-color: #fff;
-  max-height: 300px;
   overflow-y: auto;
 }
 .search__results .result-item {
@@ -504,15 +493,16 @@ img, video {
   gap: 1.5rem;
   border-bottom: 1px solid #f0f0f0;
   border-radius: 0.8rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   transition: background-color 0.2s;
 }
 .search__results .result-item:hover {
   background-color: #f7f7f7;
 }
 .search__results .result-item__image {
-  width: 80px;
-  height: 120px;
+  min-width: 100px;
+  max-width: 100px;
+  height: 140px;
   overflow: hidden;
   border-radius: 0.5rem;
 }

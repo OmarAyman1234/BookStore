@@ -39,15 +39,21 @@
           </a>
         </nav>
         <div class="navbar__auth">
-          <a href="./pages/login-register/login.html" class="btn btn--secondary"
+          <a
+            href="./pages/login-register/login.html"
+            id="signInBtn"
+            class="btn btn--secondary"
             >Login</a
           >
-          <a href="./pages/login-register/signup.html" class="btn btn--primary"
+          <a
+            href="./pages/login-register/signup.html"
+            id="signUpBtn"
+            class="btn btn--primary"
             >Sign Up</a
           >
 
           <!-- Avatar for signed-in users -->
-          <div class="navbar__profile">
+          <div class="navbar__profile" id="userAvatar">
             <a
               href="./pages/user-dashboard/userDashboard.html"
               class="navbar__avatar"
@@ -58,7 +64,7 @@
               <a href="./pages/user-dashboard/userDashboard.html">
                 <i class="fas fa-user"></i> Profile
               </a>
-              <a href="./pages/login-register/login.html">
+              <a href="./pages/login-register/login.html" id="logoutBtn">
                 <i class="fas fa-sign-out-alt"></i> Logout
               </a>
             </div>
@@ -79,8 +85,12 @@
             Access thousands of authentic Islamic books and manuscripts
           </p>
           <div class="hero__cta">
-            <button class="btn btn--primary btn--large"><a href="./pages/catalog/catalog.html">Explore Library</a></button>
-            <button class="btn btn--outline btn--large"><a href="./pages/history/history.html">Learn More</a></button>
+            <button class="btn btn--primary btn--large">
+              <a href="./pages/catalog/catalog.html">Explore Library</a>
+            </button>
+            <button class="btn btn--outline btn--large">
+              <a href="./pages/history/history.html">Learn More</a>
+            </button>
           </div>
         </div>
         <div class="hero__decoration">

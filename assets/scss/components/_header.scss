@@ -69,19 +69,6 @@
   &__auth {
     display: flex;
     gap: 1rem;
-
-    &.logged-in {
-      display: flex;
-
-      .navbar__profile {
-        display: flex;
-        align-items: center;
-      }
-
-      button {
-        display: none; // Hide login and signup buttons
-      }
-    }
   }
 
   &__toggle {
@@ -90,7 +77,7 @@
 
   &__profile {
     position: relative;
-    // display: none; // Hidden by default, shown after login
+    display: none;
 
     .navbar__avatar {
       display: flex;
@@ -102,7 +89,7 @@
       transition: transform 0.2s ease;
 
       &:hover {
-        transform: scale(1.1); // Slight zoom effect
+        transform: scale(1.1);
       }
     }
     .navbar__dropdown {
