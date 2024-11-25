@@ -1,20 +1,15 @@
-/* General Styling */
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #F5F5DC;
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
+  padding: 0;
+  background-color: #F5F5DC;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-}
-
-.container {
-  display: flex;
-  gap: 20px;
 }
 
 .form-box {
@@ -117,119 +112,105 @@ p {
   text-decoration: none;
 }
 
-footer {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #aaa;
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
 }
 
-  
-  /* Header Styling */
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    background-color:#2E8B57;;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logoContent {
-    display: flex;
-    align-items: center;
-    color: #2E8B57;
-  }
-  
-  .logoContent__logo {
-    height: 40px;
-    align-items: center;
-    color: #2E8B57;
-  }
-  
-  .navLinks__list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navLinks__link {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .button__sign {
-    text-decoration: none;
-    padding: 8px 12px;
-    margin-left: 10px;
-    background-color: #2E8B57;
-    color: #fff;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .button__sign:hover {
-    background-color: #2E8B57;
-  }
-  
-  /* Modal Styling */
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal--hidden {
-    display: none;
-  }
-  
-  .modal__content {
-    background: #F5F5DC;
-    color:#2E8B57;;
-    display: Top ;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .modal__title {
-    width: 10%;
-    height: 25%;
-    justify-self: center;
-    display: flex;
-    text-align: center;
-    align-self: center;
-  }
-  
-  .modal__input {
-    width: 30%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .button__submit {
-    padding: 10px;
-    width: 50%;
-    border: none;
-    background: #2E8B57;
-    color: white;
-  }
-  
-  .modal__close {
-    margin-top: 15px;
-    text-decoration: underline;
-    color: #333;
-    cursor: pointer;
-  }
-  
+.modal--hidden {
+  display: none;
+}
+
+.modal__content {
+  background: #F5F5DC;
+  color: #2E8B57;
+  display: Top;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal__title {
+  width: 10%;
+  height: 25%;
+  justify-self: center;
+  display: flex;
+  text-align: center;
+  align-self: center;
+}
+
+.modal__input {
+  width: 30%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button__submit {
+  padding: 10px;
+  width: 50%;
+  border: none;
+  background: #2E8B57;
+  color: white;
+}
+
+.modal__close {
+  margin-top: 15px;
+  text-decoration: underline;
+  color: #333;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 10px;
+  border-radius: 8px;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.social-icons a:nth-child(1) {
+  background-color: #3b5998; /* Facebook blue */
+}
+
+.social-icons a:nth-child(1):hover {
+  background-color: #2d4373;
+}
+
+.social-icons a:nth-child(2) {
+  background-color: #1da1f2; /* Twitter blue */
+}
+
+.social-icons a:nth-child(2):hover {
+  background-color: #0d95e8;
+}
+
+.social-icons a:nth-child(3) {
+  background-color: #bd081c; /* Pinterest red */
+}
+
+.social-icons a:nth-child(3):hover {
+  background-color: #8c0615;
+}
