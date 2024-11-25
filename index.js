@@ -15,11 +15,11 @@ if (isSignedIn) {
   const signUpBtn = document.getElementById("signUpBtn");
   const userAvatar = document.getElementById("userAvatar");
 
-  // Hide sign-in button and show the person icon
   signInBtn.style.display = "none";
   signUpBtn.style.display = "none";
   userAvatar.style.display = "inline-block";
 }
+
 /* ------------------------------------------------------------------ */
 
 const searchInput = document.getElementById("searchInput");

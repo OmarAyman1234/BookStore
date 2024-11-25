@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="icon" href="../../assets/images/logo.png" />
-    <link rel="stylesheet" href="borrowReserve.css">
+    <link rel="stylesheet" href="borrowReserve.css" />
     <title>Zad El Maad - Borrow Reserve</title>
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
     />
   </head>
   <body>
+    <!-- Navigation -->
     <header class="navbar">
       <div class="navbar__logo logoContent">
         <img
@@ -20,17 +21,51 @@
           alt="Maktaba Logo"
           class="logo-img rotating"
         />
-        <span>Maktaba</span>
+        <a href="/BookStore/index.html"><span>Maktaba</span></a>
       </div>
       <nav class="navbar__menu">
-        <a href="./pages/borrow-reserve/borrowReserve.html" class="active">Home</a>
-        <a href="./pages/catalog/catalog.html">Catalog</a>
-        <a href="./pages/user-dashboard/userDashboard.html">About</a>
-        <a href="./pages/book-details/bookDetails.html">Contact</a>
+        <a href="../borrow-reserve/borrowReserve.html">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="../catalog/catalog.html">
+          <i class="fas fa-book"></i> Catalog
+        </a>
+        <a href="../user-dashboard/userDashboard.html">
+          <i class="fas fa-user"></i> About
+        </a>
+        <a href="../book-details/bookDetails.html">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
       </nav>
       <div class="navbar__auth">
-        <button class="btn btn--secondary">Login</button>
-        <button class="btn btn--primary">Sign Up</button>
+        <a
+          href="../login-register/login.html"
+          id="signInBtn"
+          class="btn btn--secondary"
+          >Login</a
+        >
+        <a
+          href="../login-register/signup.html"
+          id="signUpBtn"
+          class="btn btn--primary"
+          >Sign Up</a
+        >
+
+        <!-- Avatar for signed-in users -->
+        <div class="navbar__profile" id="userAvatar">
+          <a href="../user-dashboard/userDashboard.html" class="navbar__avatar"
+            ><i class="fas fa-user"></i
+          ></a>
+
+          <div class="navbar__dropdown">
+            <a href="../user-dashboard/userDashboard.html">
+              <i class="fas fa-user"></i> Profile
+            </a>
+            <a href="../login-register/login.html" id="logoutBtn">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
       </div>
       <div class="navbar__toggle">
         <span></span>
@@ -39,55 +74,89 @@
       </div>
     </header>
 
-    <div class="book-container">
-
-    </div>
+    <div class="book-container"></div>
 
     <div class="additional-section">
       <form class="book-form" action="/submit" method="post">
         <h2>Book Reservation</h2>
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Enter your name" name="name" required>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            name="name"
+            required
+          />
         </div>
-        
+
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email"placeholder="Enter your email" name="email" required>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            name="email"
+            required
+          />
         </div>
-        
+
         <div class="form-group">
           <label for="message">Reservation Message:</label>
-          <textarea id="message" name="message"placeholder="Reservation message..." rows="4" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Reservation message..."
+            rows="4"
+            required
+          ></textarea>
         </div>
-        
+
         <div class="btn">
-          <input type="submit" value="Reserve Book" class="submit-btn">
+          <input type="submit" value="Reserve Book" class="submit-btn" />
         </div>
       </form>
       <form class="book-form" action="/submit" method="post">
         <h2>Book Borrowing</h2>
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Enter your name" name="name" required>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            name="name"
+            required
+          />
         </div>
-        
+
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" placeholder="Enter your email" id="email" name="email" required>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="email"
+            name="email"
+            required
+          />
         </div>
-        
+
         <div class="form-group">
           <label for="message">Borrowing Message:</label>
-          <textarea id="message" name="message" placeholder="Borrowing message..." rows="4" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Borrowing message..."
+            rows="4"
+            required
+          ></textarea>
         </div>
-        
+
         <div class="btn">
-          <input type="submit" value="Borrow Book" class="submit-btn">
+          <input type="submit" value="Borrow Book" class="submit-btn" />
         </div>
       </form>
     </div>
-  
+
     <footer class="footer">
       <div class="footer__grid">
         <div class="footer__about">
@@ -127,7 +196,7 @@
       </div>
     </footer>
 
-
     <script src="borrowReserve.js" type="module"></script>
+    <script src="/BookStore/index.js" type="module"></script>
   </body>
 </html>
