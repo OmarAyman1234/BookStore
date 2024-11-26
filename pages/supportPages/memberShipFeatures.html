@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <link rel="icon" href="../../assets/images/logo.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <title>About Us - MaktabaHub</title>
+<style>
+    body {
+        background-color: #F5F5DC;
+        color: black;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        color: #2E8B57;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .feature-card {
+        background-color: #F5F5DC;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    .feature-title {
+        color: #2E8B57;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .highlight {
+        color: #D4AF37;
+        font-weight: bold;
+    }
+    .cta-button {
+        display: block;
+        background-color: #2E8B57;
+        color: white;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        margin: 30px auto 0;
+        max-width: 200px;
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+        background-color: #246B43;
+    }
+
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__logo logoContent">
+        <img
+          src="../../assets/images/logo.png"
+          alt="Maktaba Logo"
+          class="logo-img rotating"
+        />
+        <span>Maktaba</span>
+        <!-- <a href="../../index.html"><span>Maktaba</span></a> put this tag -->
+      </div>
+      <nav class="navbar__menu">
+        <a href="./pages/borrow-reserve/borrowReserve.html">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="./pages/catalog/catalog.html">
+          <i class="fas fa-book"></i> Catalog
+        </a>
+        <a href="./pages/user-dashboard/userDashboard.html">
+          <i class="fas fa-user"></i> About
+        </a>
+        <a href="./pages/book-details/bookDetails.html">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+      </nav>
+      <div class="navbar__auth">
+        <a
+          href="./pages/login-register/login.html"
+          id="signInBtn"
+          class="btn btn--secondary"
+          >Login</a
+        >
+        <a
+          href="./pages/login-register/signup.html"
+          id="signUpBtn"
+          class="btn btn--primary"
+          >Sign Up</a
+        >
+
+        <!-- Avatar for signed-in users -->
+        <div class="navbar__profile" id="userAvatar">
+          <a
+            href="./pages/user-dashboard/userDashboard.html"
+            class="navbar__avatar"
+            ><i class="fas fa-user"></i
+          ></a>
+
+          <div class="navbar__dropdown">
+            <a href="./pages/user-dashboard/userDashboard.html">
+              <i class="fas fa-user"></i> Profile
+            </a>
+            <a href="./pages/login-register/login.html" id="logoutBtn">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div class="container">
+        <h1>Premium Membership Benefits</h1>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-title">Unlimited Access</div>
+                <p>Access our entire collection of Islamic books, manuscripts, and research papers</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Offline Reading</div>
+                <p>Download books for offline reading on any device</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Scholar Sessions</div>
+                <p>Exclusive monthly online sessions with renowned scholars</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Priority Support</div>
+                <p>24/7 priority customer support for all your queries</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Advanced Search</div>
+                <p>Use our advanced search tools to find specific references</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">No Ads</div>
+                <p>Enjoy an ad-free reading experience</p>
+            </div>
+        </div>
+        <a href="#" class="cta-button">Activate Now!</a>
+    </div>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <div class="footer__logo logoContent">
+            <img src="../../assets/images/logo.png"" alt="Maktaba Logo"
+            class="logo-img rotating" />
+            <span>Maktaba</span>
+          </div>
+          <p>Maktaba is your gateway to authentic Islamic knowledge</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <a href="./index.html">Home</a>
+          <a href="./pages/catalog/catalog.html">Catalog</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@maktaba.com</p>
+          <p>Phone: +1 234 567 890</p>
+        </div>
+        <div class="footer__social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Maktaba. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

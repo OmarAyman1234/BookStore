@@ -17,5 +17,5 @@ bellIcon.addEventListener('click', () => {
 const markAsRead = () => {
   const badge = document.querySelector('.badge');
   badge.textContent = '0';
-  // Optionally update backend or localStorage
+  // reset it to 0 when clicked :)
 };
