@@ -4,18 +4,21 @@
 
 */
 
-
 // Notifications checking function with JS :
 
-const bellIcon = document.querySelector('.notification-badge');
-const notificationDropdown = document.querySelector('.notifications-dropdown');
+const bellIcon = document.querySelector(".notification-badge");
+const notificationDropdown = document.querySelector(".notifications-dropdown");
 
-bellIcon.addEventListener('click', () => {
-  notificationDropdown.classList.toggle('visible');
+bellIcon.addEventListener("click", () => {
+  notificationDropdown.classList.toggle("visible");
 });
 
 const markAsRead = () => {
-  const badge = document.querySelector('.badge');
-  badge.textContent = '0';
+  const badge = document.querySelector(".badge");
+  badge.textContent = "0";
   // reset it to 0 when clicked :)
 };
+
+/* --------------- الكود التالي يحذف دائرة المستخدم من ناف بار -------------- */
+const profileSection = document.querySelector(".navbar__auth");
+profileSection.style.display = "none";
