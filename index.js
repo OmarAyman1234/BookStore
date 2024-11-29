@@ -93,3 +93,17 @@ searchTags.addEventListener("click", (e) => {
   searchInput.value = tagValue;
   handleSearch(tagValue);
 });
+
+function navigateToBookDetails(buttonId) {
+  if (!buttonId) {
+    console.error("Missing button ID for navigation");
+    return;
+  }
+  window.location.href = `./pages/book-details/bookDetails.html?bookId=${buttonId}`;
+}
+
+document.body.addEventListener("click", (event) => {
+  if (event.target.classList.contains("view-details-link")) {
+    navigateToBookDetails(event.target.dataset.buttonId);
+  }
+});
