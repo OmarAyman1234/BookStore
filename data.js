@@ -7,7 +7,7 @@ export const books = [
     description: "Riyad as-Salihin is a selection of hadith compiled by Imam Yahya ibn Sharaf an-Nawawi (rahimahullah). It is one of the most widely known and read books of hadith all over the world. It is practical and accessible to Muslims of all levels.",
     image: "books-data/riyad.bmp",
     category: "Hadith",
-    reserved: false,
+    isAvailable: false,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const books = [
     description: "Sahih al-Bukhari is a collection of hadith compiled by Imam Muhammad al-Bukhari (rahimahullah). His collection is recognized by the overwhelming majority of the Muslim world to be the most authentic collection of reports of the Sunnah of the Prophet Muhammad (ﷺ).",
     image: "books-data/sahih-al-bukhari.jpg",
     category: "Hadith",
-    reserved: false,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const books = [
     description: "Sahih Muslim is a collection of hadith compiled by Imam Muslim ibn al-Hajjaj al-Naysaburi (rahimahullah). His collection is considered to be the most authentic collections of the Sunnah of the Prophet (ﷺ) after Sahih Al-Bukhari.",
     image: "books-data/sahih-muslim.jpeg",
     category: "Hadith",
-    reserved: false,
+    isAvailable: true,
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const books = [
     description: "Nawawi's Forty (al-Arbaʿīn al-Nawawiyyah) is a renowned collection of forty hadiths compiled by Imam al-Nawawi (rahimahullah), drawn primarily from Sahih Muslim and Sahih al-Bukhari. Esteemed for distilling the core principles of Islamic sacred law (Sharīʿah), it features hadiths considered fundamental to Islam.",
     image: "books-data/40-Hadith-An-Nawawi.jpg",
     category: "Hadith",
-    reserved: false,
+    isAvailable: true,
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const books = [
     description: "Tafsīr al-Qurʾān al-ʿAẓīm, commonly known as Tafsir Ibn Kathir is one of the most famous Islamic books concerned with the science of interpretation of the Quran, written by Imam Ibn Kathir (rahimahullah).",
     image: "books-data/tafsir-ibn-kathir.jpg",
     category: "Quran",
-    reserved: false,
+    isAvailable: false,
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const books = [
     description: "Tafsir As-Sa'di is a straightforward, easy to read, easy to understand explanation of the meaning of Qur'anic Ayat and statements. In addition to the simplicity of Ibn Sa'di's writing, it is also articulate and eloquent. Consequently, for those newly acquainted with Tafsir and those new to Islam, written by Shaikh Abdur-Rahman Naser As-sa'di (rahimahullah).",
     image: "books-data/tafsir-as-sa-di.jpg",
     category: "Quran",
-    reserved: false,
+    isAvailable: true,
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const books = [
     description: "Zad El Maad is a profound scholarly work exploring Islamic theology, prophetic traditions, and spiritual guidance. Written by the renowned scholar Ibn Al-Qayyim (rahimahullah), this text offers deep insights into Islamic philosophy and practice.",
     image: "books-data/zad_el_maad.jpg",
     category: "Seerah",
-    reserved: false,
+    isAvailable: true,
   }
 ];
 

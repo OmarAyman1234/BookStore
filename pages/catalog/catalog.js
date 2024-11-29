@@ -5,13 +5,13 @@ let booksDisplay = "";
 // Generate the initial book cards
 books.forEach((book) => {
   booksDisplay += `
-     <div class="book-card" data-reserved="${book.reserved}">
+      <div class="book-card" data-book-id="${book.id}" data-reserved="${book.reserved}">
         <img src="../../assets/images/${book.image || "book.png"}" alt="${book.name}" />
         <div class="book-title">${book.name}</div>
         <div class="book-author">${book.author}</div>
-        <div class="availability">${book.reserved ? "Reserved" : "Available"}</div>
-        <button class="borrow-button" ${book.reserved ? "disabled" : ""}>
-          ${book.reserved ? "Unavailable" : "Borrow"}
+        <div style="color: ${book.isAvailable? "#D4AF37" : "red"}" class="availability">${book.isAvailable ? "Available" : "Not Available"}</div>
+        <button data-book-id="${book.id}" class="borrow-button">
+          ${book.isAvailable ? "Borrow" : "Reserve"}
         </button>
       </div>
     `;
@@ -33,22 +33,22 @@ document.getElementById("sort").addEventListener("change", (e) => {
   let booksDisplay = "";
   sortedBooks.forEach((book) => {
     booksDisplay += `
-       <div class="book-card" data-reserved="${book.reserved}">
-          <img src="../../assets/images/${book.image || "book.png"}" alt="${book.name}" />
-          <div class="book-title">${book.name}</div>
-          <div class="book-author">${book.author}</div>
-          <div class="availability">${book.reserved ? "Reserved" : "Available"}</div>
-          <button class="borrow-button" ${book.reserved ? "disabled" : ""}>
-            ${book.reserved ? "Unavailable" : "Borrow"}
-          </button>
-        </div>
-      `;
+      <div class="book-card" data-book-id="${book.id}" data-reserved="${book.reserved}">
+        <img src="../../assets/images/${book.image || "book.png"}" alt="${book.name}" />
+        <div class="book-title">${book.name}</div>
+        <div class="book-author">${book.author}</div>
+        <div style="color: ${book.isAvailable? "#D4AF37" : "red"}" class="availability">${book.isAvailable ? "Available" : "Not Available"}</div>
+        <button data-book-id="${book.id}" class="borrow-button">
+          ${book.isAvailable ? "Borrow" : "Reserve"}
+        </button>
+      </div>
+    `;
   });
   document.getElementById("book_grid").innerHTML = booksDisplay;
 });
 
 // Search functionality
-document.querySelector("#searchButton").addEventListener("click", () => {
+function searchFunctionality() {
   const query = document.querySelector("#searchInput").value.toLowerCase();
 
   const filteredBooks = books.filter(
@@ -61,16 +61,16 @@ document.querySelector("#searchButton").addEventListener("click", () => {
   let booksDisplay = "";
   filteredBooks.forEach((book) => {
     booksDisplay += `
-       <div class="book-card" data-reserved="${book.reserved}">
-          <img src="../../assets/images/${book.image || "book.png"}" alt="${book.name}" />
-          <div class="book-title">${book.name}</div>
-          <div class="book-author">${book.author}</div>
-          <div class="availability">${book.reserved ? "Reserved" : "Available"}</div>
-          <button class="borrow-button" ${book.reserved ? "disabled" : ""}>
-            ${book.reserved ? "Unavailable" : "Borrow"}
-          </button>
-        </div>
-      `;
+      <div class="book-card" data-book-id="${book.id}" data-reserved="${book.reserved}">
+        <img src="../../assets/images/${book.image || "book.png"}" alt="${book.name}" />
+        <div class="book-title">${book.name}</div>
+        <div class="book-author">${book.author}</div>
+        <div style="color: ${book.isAvailable? "#D4AF37" : "red"}" class="availability">${book.isAvailable ? "Available" : "Not Available"}</div>
+        <button data-book-id="${book.id}" class="borrow-button">
+          ${book.isAvailable ? "Borrow" : "Reserve"}
+        </button>
+      </div>
+    `;
   });
 
   if (filteredBooks.length === 0) {
@@ -78,5 +78,22 @@ document.querySelector("#searchButton").addEventListener("click", () => {
   } else {
     document.getElementById("book_grid").innerHTML = booksDisplay;
   }
+}
+
+//Activate search button
+document.querySelector("#searchButton").addEventListener("click", () => {
+  searchFunctionality();
+});
+//Activate search when pressing enter key when inside the search button's parent element (The search bar)
+document.querySelector("#searchButton").parentElement.addEventListener('keydown', (event) => {
+  if(event.key === 'Enter')
+    searchFunctionality();
 });
 
+document.body.addEventListener('click', (event) => {
+  if(event.target.classList.contains("borrow-button")) {
+    const bookId = event.target.dataset.bookId;
+
+    window.location.href = `../borrow-reserve/borrowReserve.html?bookId=${bookId}`
+  }
+});

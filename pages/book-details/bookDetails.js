@@ -21,7 +21,8 @@ if(bookId) {
         <div>
           <h2>${foundBook.name}</h2>
           <a class="details-book-info-author" href="${foundBook.authorInfo}" target="_blank">${foundBook.author}</a>
-        </div>
+          </div>
+        <p style="color: ${foundBook.isAvailable? "green" : "red"}; font-weight: bold">${foundBook.isAvailable? "Available" : "Not available"}</p>
         <p class="details-book-description">${foundBook.description}</p>
       </div>
   `;
@@ -33,7 +34,7 @@ if(bookId) {
   if(buttonContainer) {
     buttonContainer.innerHTML = `
       <button class="details-borrow-reserve-btn" data-book-id=${foundBook.id}>
-        Borrow/Reserve Book
+        ${foundBook.isAvailable? "Borrow book" : "Reserve book"}
       </button>
     `;
 
@@ -47,7 +48,7 @@ if(bookId) {
   }
   
   //Display related books
-  const relatedBooksContainer = document.querySelector(".details-related-books-container");
+  const relatedBooksParent = document.querySelector(".details-related-books-container");
   const relatedBooks = getRelatedBooks(bookId);
 
   let relatedBooksHTML = ``;
@@ -59,13 +60,31 @@ if(bookId) {
           <h3>${book.name}</h3>
           <p>${book.author}</p>
         </div>
-      `;
+        `;
     });
   }
   else {
     relatedBooksHTML = "<p>There are no related books at the moment.</p>";
   }
-  relatedBooksContainer.innerHTML = relatedBooksHTML;
+  relatedBooksParent.innerHTML = relatedBooksHTML;
+
+  const allRelatedBooks = document.querySelectorAll('.details-related-book-container');
+  allRelatedBooks.forEach(bookElement => {
+    //get the book's id from the data html attribute
+    const bookId = bookElement.getAttribute('data-book-id');
+    const book = getBook(bookId);
+
+    bookElement.addEventListener('mouseenter', () => {
+      bookElement.style.backgroundColor = book.isAvailable? "rgba(46, 139, 86, 0.2)" : "rgba(255, 139, 86, 0.2)"
+    })
+  })
+  allRelatedBooks.forEach(bookElement => {
+    bookElement.addEventListener('mouseleave', () => {
+      bookElement.style.backgroundColor = ""
+    })
+  })
+
+  
 
   document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', (event) => {
