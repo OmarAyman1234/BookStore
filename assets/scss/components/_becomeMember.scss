@@ -1,0 +1,36 @@
+.become-member {
+  background-color: $primary-color;
+  color: $white;
+  padding: 30px 0;
+  text-align: center;
+
+  .become-member__content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .btn--primary {
+      background-color: $gold-color;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($gold-color, 10%);
+      }
+    }
+  }
+}

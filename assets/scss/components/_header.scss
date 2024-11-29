@@ -42,7 +42,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      gap: 0.5rem; // Space between icon and text
+      gap: 1rem;
       font-size: 1rem;
 
       &::after {
@@ -59,9 +59,19 @@
         width: 100%;
       }
 
+      &.membership-link {
+        font-weight: bold;
+        background: linear-gradient(90deg, $gold-color, $dark-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &::after {
+          background-color: $gold-color;
+        }
+      }
+
       & i {
-        font-size: 1.2rem; // Adjust icon size
-        color: $primary-color; // Match with your color scheme
+        font-size: 1.2rem;
+        color: $primary-color;
       }
     }
   }
@@ -111,19 +121,19 @@
         transition: background-color 0.2s ease;
         display: flex;
         align-items: center;
-        gap: 0.5rem; // Space between the icon and text
+        gap: 0.5rem;
         font-size: 1rem;
 
         &:hover {
           background-color: rgba(0, 0, 0, 0.05);
           & i {
-            color: $primary-color; // Highlight on hover
+            color: $primary-color;
           }
         }
 
         & i {
-          font-size: 1.2rem; // Icon size
-          color: $dark-color; // Match with your theme
+          font-size: 1.2rem;
+          color: $dark-color;
         }
       }
     }

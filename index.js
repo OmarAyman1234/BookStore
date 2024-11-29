@@ -7,8 +7,8 @@ navbarToggle.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
 
-/* -------------------------------------------------------------------- */
 const isSignedIn = localStorage.getItem("isSignedIn") === "true";
+const isMember = localStorage.getItem("isMember") === "true";
 
 if (isSignedIn) {
   const signInBtn = document.getElementById("signInBtn");
@@ -20,7 +20,13 @@ if (isSignedIn) {
   userAvatar.style.display = "inline-block";
 }
 
-/* ------------------------------------------------------------------ */
+if (isMember) {
+  const membershipLink = document.querySelector(".membership-link");
+  const becomeMemberSection = document.getElementById("become-member");
+
+  membershipLink.style.display = "inline-block";
+  becomeMemberSection.style.display = "none";
+}
 
 const searchInput = document.getElementById("searchInput");
 const searchTags = document.getElementById("searchTags");

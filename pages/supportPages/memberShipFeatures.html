@@ -15,9 +15,6 @@
         background-color: #f5f5dc;
         color: black;
       }
-      .navbar__menu {
-        padding-right: 13rem;
-      }
       .container {
         max-width: 800px;
         margin: 20px auto;
@@ -70,55 +67,8 @@
     </style>
   </head>
   <body>
-    <header class="navbar">
-      <div class="navbar__logo logoContent">
-        <img
-          src="../../assets/images/logo.png"
-          alt="Maktaba Logo"
-          class="logo-img rotating"
-        />
-        <span>Maktaba</span>
-        <!-- <a href="../../index.html"><span>Maktaba</span></a> put this tag -->
-      </div>
-      <nav class="navbar__menu">
-        <a href="./pages/borrow-reserve/borrowReserve.html">
-          <i class="fas fa-home"></i> Home
-        </a>
-        <a href="./pages/catalog/catalog.html">
-          <i class="fas fa-book"></i> Catalog
-        </a>
-        <a href="./pages/user-dashboard/userDashboard.html">
-          <i class="fas fa-user"></i> About
-        </a>
-        <a href="./pages/book-details/bookDetails.html">
-          <i class="fas fa-envelope"></i> Contact
-        </a>
-      </nav>
-      <div class="navbar__auth">
-        <!-- Avatar for signed-in users -->
-        <div class="navbar__profile" id="userAvatar">
-          <a
-            href="./pages/user-dashboard/userDashboard.html"
-            class="navbar__avatar"
-            ><i class="fas fa-user"></i
-          ></a>
-
-          <div class="navbar__dropdown">
-            <a href="./pages/user-dashboard/userDashboard.html">
-              <i class="fas fa-user"></i> Profile
-            </a>
-            <a href="./pages/login-register/login.html" id="logoutBtn">
-              <i class="fas fa-sign-out-alt"></i> Logout
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="navbar__toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </header>
+    <!-- Navigation -->
+    <header id="header"></header>
 
     <div class="container">
       <h1>Premium Membership Benefits</h1>
@@ -151,45 +101,19 @@
           <p>Enjoy an ad-free reading experience</p>
         </div>
       </div>
-      <a href="#" class="cta-button">Activate Now!</a>
+      <a href="/BookStore/index.html" class="cta-button">Activate Now!</a>
     </div>
-    <footer class="footer">
-      <div class="footer__grid">
-        <div class="footer__about">
-          <div class="footer__logo logoContent">
-            <img
-              src="../../assets/images/logo.png"
-              alt="Maktaba Logo"
-              class="logo-img rotating"
-            />
-            <span>Maktaba</span>
-          </div>
-          <p>Maktaba is your gateway to authentic Islamic knowledge</p>
-        </div>
-        <div class="footer__links">
-          <h4>Quick Links</h4>
-          <a href="./index.html">Home</a>
-          <a href="./pages/catalog/catalog.html">Catalog</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </div>
-        <div class="footer__contact">
-          <h4>Contact Us</h4>
-          <p>Email: info@maktaba.com</p>
-          <p>Phone: +1 234 567 890</p>
-        </div>
-        <div class="footer__social">
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2024 Maktaba. All rights reserved.</p>
-      </div>
-    </footer>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <script src="/BookStore/assets/js/sharedContent.js"></script>
+    <script>
+      document
+        .querySelector(".cta-button")
+        .addEventListener("click", (event) => {
+          alert("Account Activated!");
+        });
+    </script>
   </body>
 </html>

@@ -12,202 +12,222 @@
     <title>Maktaba</title>
   </head>
   <body>
-    <div class="container">
-      <!-- Navigation -->
-      <header class="navbar">
-        <div class="navbar__logo logoContent">
-          <img
-            src="./assets/images/logo.png"
-            alt="Maktaba Logo"
-            class="logo-img rotating"
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="navbar__logo logoContent">
+        <img
+          src="./assets/images/logo.png"
+          alt="Maktaba Logo"
+          class="logo-img rotating"
+        />
+        <span>Maktaba</span>
+        <!-- <a href="../../index.html"><span>Maktaba</span></a> put this tag -->
+      </div>
+      <nav class="navbar__menu">
+        <a href="./pages/borrow-reserve/borrowReserve.html">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="./pages/catalog/catalog.html">
+          <i class="fas fa-book"></i> Catalog
+        </a>
+        <a href="./pages/supportPages/aboutUs.html">
+          <i class="fas fa-user"></i> About
+        </a>
+        <a href="./pages/supportPages/contactUs.html">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+        <a
+          href="./pages/supportPages/memberShipFeatures.html"
+          class="membership-link"
+          style="display: none"
+        >
+          <i class="fa-solid fa-fire"></i> Membership Features
+        </a>
+      </nav>
+      <div class="navbar__auth">
+        <a
+          href="./pages/login-register/login.html"
+          id="signInBtn"
+          class="btn btn--secondary"
+          >Login</a
+        >
+        <a
+          href="./pages/login-register/signup.html"
+          id="signUpBtn"
+          class="btn btn--primary"
+          >Sign Up</a
+        >
+
+        <!-- Avatar for signed-in users -->
+        <div class="navbar__profile" id="userAvatar">
+          <a
+            href="./pages/user-dashboard/userDashboard.html"
+            class="navbar__avatar"
+            ><i class="fas fa-user"></i
+          ></a>
+
+          <div class="navbar__dropdown">
+            <a href="./pages/user-dashboard/userDashboard.html">
+              <i class="fas fa-user"></i> Profile
+            </a>
+            <a href="./pages/login-register/login.html" id="logoutBtn">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Discover the World of Islamic Knowledge</h1>
+        <p class="hero__subtitle">
+          Access thousands of authentic Islamic books and manuscripts
+        </p>
+        <div class="hero__cta">
+          <button class="btn btn--primary btn--large">
+            <a href="./pages/catalog/catalog.html">Explore Library</a>
+          </button>
+          <button class="btn btn--outline btn--large">
+            <a href="./pages/history/history.html">Learn More</a>
+          </button>
+        </div>
+      </div>
+      <div class="hero__decoration">
+        <div class="geometric-pattern"></div>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search">
+      <div class="search__container">
+        <div class="search__box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for books, authors, or topics..."
           />
-          <span>Maktaba</span>
-          <!-- <a href="../../index.html"><span>Maktaba</span></a> put this tag -->
+          <button class="search__button" id="searchButton">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
-        <nav class="navbar__menu">
-          <a href="./pages/borrow-reserve/borrowReserve.html">
-            <i class="fas fa-home"></i> Home
-          </a>
-          <a href="./pages/catalog/catalog.html">
-            <i class="fas fa-book"></i> Catalog
-          </a>
-          <a href="./pages/supportPages/aboutUs.html">
-            <i class="fas fa-user"></i> About
-          </a>
-          <a href="./pages/supportPages/contactUs.html">
-            <i class="fas fa-envelope"></i> Contact
-          </a>
-        </nav>
-        <div class="navbar__auth">
-          <a
-            href="./pages/login-register/login.html"
-            id="signInBtn"
-            class="btn btn--secondary"
-            >Login</a
-          >
-          <a
-            href="./pages/login-register/signup.html"
-            id="signUpBtn"
-            class="btn btn--primary"
-            >Sign Up</a
-          >
+        <div class="search__tags" id="searchTags">
+          <span class="tag">Quran</span>
+          <span class="tag">Hadith</span>
+          <span class="tag">Fiqh</span>
+          <span class="tag">Seerah</span>
+        </div>
+      </div>
+      <div class="search__results" id="searchResults">
+        <!-- search results will appear here -->
+      </div>
+    </section>
 
-          <!-- Avatar for signed-in users -->
-          <div class="navbar__profile" id="userAvatar">
-            <a
-              href="./pages/user-dashboard/userDashboard.html"
-              class="navbar__avatar"
-              ><i class="fas fa-user"></i
-            ></a>
-
-            <div class="navbar__dropdown">
-              <a href="./pages/user-dashboard/userDashboard.html">
-                <i class="fas fa-user"></i> Profile
-              </a>
-              <a href="./pages/login-register/login.html" id="logoutBtn">
-                <i class="fas fa-sign-out-alt"></i> Logout
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="navbar__toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </header>
-
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero__content">
-          <h1 class="hero__title">Discover the World of Islamic Knowledge</h1>
-          <p class="hero__subtitle">
-            Access thousands of authentic Islamic books and manuscripts
-          </p>
-          <div class="hero__cta">
-            <button class="btn btn--primary btn--large">
-              <a href="./pages/catalog/catalog.html">Explore Library</a>
-            </button>
-            <button class="btn btn--outline btn--large">
-              <a href="./pages/history/history.html">Learn More</a>
-            </button>
-          </div>
-        </div>
-        <div class="hero__decoration">
-          <div class="geometric-pattern"></div>
-        </div>
-      </section>
-
-      <!-- Search Section -->
-      <section class="search">
-        <div class="search__container">
-          <div class="search__box">
-            <input
-              type="text"
-              id="searchInput"
-              placeholder="Search for books, authors, or topics..."
+    <!-- Featured Books -->
+    <section class="books">
+      <h2 class="section-title">Featured Books</h2>
+      <div class="books__grid">
+        <div class="book-card">
+          <div class="book-card__cover">
+            <img
+              src="./assets/images/books-data/Riyadh-As-Salihin.jpg"
+              alt="Book Cover"
             />
-            <button class="search__button" id="searchButton">
-              <i class="fas fa-search"></i>
-            </button>
           </div>
-          <div class="search__tags" id="searchTags">
-            <span class="tag">Quran</span>
-            <span class="tag">Hadith</span>
-            <span class="tag">Fiqh</span>
-            <span class="tag">Seerah</span>
+          <div class="book-card__info">
+            <h3>Riyadh As-Salihin</h3>
+            <p>Imam An-Nawawi</p>
+            <a
+              href="https://shamela.ws/book/12014"
+              class="btn btn--secondary"
+              target="_blank"
+            >
+              Learn More
+            </a>
           </div>
         </div>
-        <div class="search__results" id="searchResults">
-          <!-- search results will appear here -->
+        <div class="book-card">
+          <div class="book-card__cover">
+            <img
+              src="./assets/images/books-data/40-Hadith-An-Nawawi.jpg"
+              alt="Book Cover of 40 Hadith An-Nawawi"
+            />
+          </div>
+          <div class="book-card__info">
+            <h3>40 Hadith An-Nawawi</h3>
+            <p>Imam An-Nawawi</p>
+            <a
+              href="https://alnawawiforty.com/"
+              class="btn btn--secondary"
+              target="_blank"
+            >
+              Learn More
+            </a>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Featured Books -->
-      <section class="books">
-        <h2 class="section-title">Featured Books</h2>
-        <div class="books__grid">
-          <div class="book-card">
-            <div class="book-card__cover">
-              <img
-                src="./assets/images/books-data/Riyadh-As-Salihin.jpg"
-                alt="Book Cover"
-              />
-            </div>
-            <div class="book-card__info">
-              <h3>Riyadh As-Salihin</h3>
-              <p>Imam An-Nawawi</p>
-              <a
-                href="https://shamela.ws/book/12014"
-                class="btn btn--secondary"
-                target="_blank"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-          <div class="book-card">
-            <div class="book-card__cover">
-              <img
-                src="./assets/images/books-data/40-Hadith-An-Nawawi.jpg"
-                alt="Book Cover of 40 Hadith An-Nawawi"
-              />
-            </div>
-            <div class="book-card__info">
-              <h3>40 Hadith An-Nawawi</h3>
-              <p>Imam An-Nawawi</p>
-              <a
-                href="https://alnawawiforty.com/"
-                class="btn btn--secondary"
-                target="_blank"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- Become a member -->
+    <section id="become-member" class="become-member">
+      <div class="become-member__content">
+        <h2>Become a Member</h2>
+        <p>
+          Join our community and gain access to exclusive content and resources.
+        </p>
+        <a
+          href="./pages/supportPages/becomeAMember.html"
+          class="btn btn--primary"
+          >Sign Up Now</a
+        >
+      </div>
+    </section>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer__grid">
-          <div class="footer__about">
-            <div class="footer__logo logoContent">
-              <img
-                src="./assets/images/logo.png"
-                alt="Maktaba Logo"
-                class="logo-img rotating"
-              />
-              <span>Maktaba</span>
-            </div>
-            <p>Maktaba is your gateway to authentic Islamic knowledge</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <div class="footer__logo logoContent">
+            <img
+              src="./assets/images/logo.png"
+              alt="Maktaba Logo"
+              class="logo-img rotating"
+            />
+            <span>Maktaba</span>
           </div>
-          <div class="footer__links">
-            <h4>Quick Links</h4>
-            <a href="./index.html">Home</a>
-            <a href="./pages/catalog/catalog.html">Catalog</a>
-            <a href="./pages/supportPages/aboutUs.html">About</a>
-            <a href="./pages/supportPages/contactUs.html">Contact</a>
-          </div>
-          <div class="footer__contact">
-            <h4>Contact Us</h4>
-            <p>Email: info@maktaba.com</p>
-            <p>Phone: +1 234 567 890</p>
-          </div>
-          <div class="footer__social">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+          <p>Maktaba is your gateway to authentic Islamic knowledge</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <a href="./index.html">Home</a>
+          <a href="./pages/catalog/catalog.html">Catalog</a>
+          <a href="./pages/supportPages/aboutUs.html">About</a>
+          <a href="./pages/supportPages/contactUs.html">Contact</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@maktaba.com</p>
+          <p>Phone: +1 234 567 890</p>
+        </div>
+        <div class="footer__social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-        <div class="footer__bottom">
-          <p>&copy; 2024 Maktaba. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Maktaba. All rights reserved.</p>
+      </div>
+    </footer>
     <script src="./index.js" type="module"></script>
     <script src="./test.js" type="module"></script>
   </body>
