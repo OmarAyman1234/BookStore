@@ -1,124 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../../assets/images/logo.png" />
-  <link rel="stylesheet" href="/BookStore/assets/css/main.css">
-  <title>Librarian Dashboard</title>
-  <style>
-    body {
-      padding: 0;
-      display: grid;
-      place-items: center;
-      height: 100vh;
-      background-color: #F5F5DC;
-    }
-
-    /* Loader Container */
-    .loader-container {
-      margin-top: 50vh;
-      text-align: center;
-    }
-
-    .loader-text {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: #2E8B57;
-    }
-
-    /* Circular Loader */
-    .loader {
-      position: relative;
-      width: 80px;
-      height: 80px;
-      margin: auto auto;
-    }
-
-    .loader::before, .loader::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      border: 8px solid transparent;
-      animation: spin 1s linear infinite;
-    }
-
-    .loader::before {
-      border-top-color: #2E8B57;
-      z-index: 100;
-    }
-
-    .loader::after {
-      border-bottom-color: #D4AF37;
-      animation-duration: 2s;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../assets/images/logo.png" />
+    <link rel="stylesheet" href="/BookStore/assets/css/main.css" />
+    <title>Librarian Dashboard</title>
+    <style>
+      body {
+        padding: 0;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background-color: #f5f5dc;
       }
-    }
 
-    /* Hidden Dashboard */
-    .dashboard-container {
-      opacity: 0;
-      max-width: 600px;
-      width: 100%;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      text-align: center;
-      transition: .5s;
-    }
+      /* Loader Container */
+      .loader-container {
+        margin-top: 50vh;
+        text-align: center;
+      }
 
-    .dashboard-container h2 {
-      margin-bottom: 1rem;
-      color: #2E8B57;
-    }
+      .loader-text {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: #2e8b57;
+      }
 
-    .dashboard-buttons a {
-      display: block;
-      background-color: #2E8B57;
-      color: white;
-      text-align: center;
-      padding: 0.8rem;
-      border-radius: 5px;
-      font-size: 1rem;
-      margin: 0.5rem 0;
-      text-decoration: none;
-    }
+      /* Circular Loader */
+      .loader {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: auto auto;
+      }
 
-    .dashboard-buttons a:hover {
-      background-color: #D4AF37;
-    }
-  </style>
-</head>
-<body>
-  <!-- Loader Section -->
-  <div id="loader-container" class="loader-container">
-    <div class="loader"></div>
-    <div class="loader-text">Checking credentials...</div>
-  </div>
+      .loader::before,
+      .loader::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 8px solid transparent;
+        animation: spin 1s linear infinite;
+      }
 
-  <!-- Dashboard -->
-  <div id="dashboard" class="dashboard-container">
-    <h2>Welcome, Librarian!</h2>
-    <p>Manage library operations quickly and easily.</p>
-    <div class="dashboard-buttons">
-      <a href="#manage-books">📚 Manage Books</a>
-      <a href="#user-accounts">👤 User Accounts</a>
-      <a href="#reports">📊 Reports</a>
-      <a href="/BookStore/index.html">🚪 Back To Home</a>
+      .loader::before {
+        border-top-color: #2e8b57;
+        z-index: 100;
+      }
+
+      .loader::after {
+        border-bottom-color: #d4af37;
+        animation-duration: 2s;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Hidden Dashboard */
+      .dashboard-container {
+        opacity: 0;
+        max-width: 600px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        text-align: center;
+        transition: 0.5s;
+      }
+
+      .dashboard-container h2 {
+        margin-bottom: 1rem;
+        color: #2e8b57;
+      }
+
+      .dashboard-buttons a {
+        display: block;
+        background-color: #2e8b57;
+        color: white;
+        text-align: center;
+        padding: 0.8rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        text-decoration: none;
+      }
+
+      .dashboard-buttons a:hover {
+        background-color: #d4af37;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loader Section -->
+    <div id="loader-container" class="loader-container">
+      <div class="loader"></div>
+      <div class="loader-text">Checking credentials...</div>
     </div>
-  </div>
 
-  <script>
-    setTimeout(() => {
-      document.getElementById('loader-container').style.display = 'none';
-      document.getElementById('dashboard').style.opacity = '1';
-    }, 3000);
-  </script>
-</body>
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard-container">
+      <h2>Welcome, Librarian!</h2>
+      <p>Manage library operations quickly and easily.</p>
+      <div class="dashboard-buttons">
+        <a href="#manage-books">📚 Manage requests</a>
+        <a href="#user-accounts">👤 User Accounts</a>
+        <a href="#reports">📊 Reports</a>
+        <a href="/BookStore/index.html">🚪 Back To Home</a>
+      </div>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        document.getElementById("loader-container").style.display = "none";
+        document.getElementById("dashboard").style.opacity = "1";
+      }, 3000);
+    </script>
+  </body>
 </html>
