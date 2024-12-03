@@ -5,16 +5,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     forms.forEach(form => {
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); 
+            const nameInput = document.getElementById('name').value.trim();
 
-            const formTitle = this.querySelector('h2').textContent;
-            
-            if (formTitle === 'Book Reservation') {
-                alert('Book has been successfully reserved! We will contact you soon.');
-            } else if (formTitle === 'Book Borrowing') {
-                alert('Book borrowing request submitted successfully! Our librarian will process your request.');
+            // Regular expression to allow only letters and spaces
+            const namePattern = /^[a-zA-Z\s]+$/;
+        
+            if (!namePattern.test(nameInput)) {
+                event.preventDefault(); // Prevent form submission
+                alert('Name must contain only letters and spaces. Please try again.');
             }
-            this.reset();
+            else {
+                const formTitle = this.querySelector('h2').textContent;
+                
+                if (formTitle === 'Book Reservation') {
+                    alert('Book has been successfully reserved! We will contact you soon.');
+                } else if (formTitle === 'Book Borrowing') {
+                    alert('Book borrowing request submitted successfully! Our librarian will process your request.');
+                }
+                this.reset();
+            }
+
         });
     });
 });
