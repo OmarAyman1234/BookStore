@@ -6,10 +6,10 @@ const headerContent = `
           alt="Maktaba Logo"
           class="logo-img rotating"
         />
-        <a href="/BookStore/index.html"><span>Maktaba</span></a>
+        <a href="/index.html"><span>Maktaba</span></a>
       </div>
       <nav class="navbar__menu">
-        <a href="/BookStore/index.html"> <i class="fas fa-home"></i> Home </a>
+        <a href="/index.html"> <i class="fas fa-home"></i> Home </a>
         <a href="../catalog/catalog.html">
           <i class="fas fa-book"></i> Catalog
         </a>
@@ -81,7 +81,7 @@ const footerContent = `
         </div>
         <div class="footer__links">
           <h4>Quick Links</h4>
-          <a href="/BookStore/index.html">Home</a>
+          <a href="/index.html">Home</a>
           <a href="../catalog/catalog.html">Catalog</a>
           <a href="../supportPages/aboutUs.html">About</a>
           <a href="../supportPages/contactUs.html">Contact</a>
@@ -137,3 +137,16 @@ if (isMember) {
 
   membershipLink.style.display = "inline-block";
 }
+
+const contactForm = document.getElementById("contact-form");
+contactForm.addEventListener('submit', () => {
+  const nameInput = document.getElementById('name').value.trim();
+  
+  // Regular expression to allow only letters and spaces
+  const namePattern = /^[a-zA-Z\s]+$/;
+  
+  if (!namePattern.test(nameInput)) {
+      event.preventDefault(); // Prevent form submission
+      alert('Name must contain only letters and spaces. Please try again.');
+  }
+})

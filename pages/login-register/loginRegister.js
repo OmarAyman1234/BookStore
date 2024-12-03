@@ -5,5 +5,5 @@ form.addEventListener("submit", (e) => {
 
   localStorage.setItem("isSignedIn", "true");
 
-  window.location.href = "/BookStore/index.html";
+  window.location.href = "/index.html";
 });
